@@ -14,7 +14,7 @@ export default function Hero2() {
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (
-    <section ref={ref} id="home" className="relative flex items-center justify-center min-h-screen overflow-hidden bg-gradient-to-b from-background via-accent/10 to-background">
+    <section ref={ref} id="home" className="relative flex items-center justify-center  overflow-hidden bg-gradient-to-b from-background via-accent/10 to-background">
       {/* Animated Background Shapes with Parallax */}
       <motion.div style={{ y }} className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -81,15 +81,7 @@ export default function Hero2() {
 
       {/* Content */}
       <motion.div style={{ opacity }} className="relative z-10 px-4 py-20 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-medium rounded-full bg-primary/10 text-primary"
-        >
-          <Sparkles className="w-4 h-4" />
-          <span>Welcome to Innovation</span>
-        </motion.div>
+        
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -97,9 +89,9 @@ export default function Hero2() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mb-6 text-4xl font-bold leading-tight sm:text-5xl md:text-6xl lg:text-7xl text-balance"
         >
-          Transforming Ideas Into{" "}
+          {" "}
           <span className="text-transparent bg-gradient-to-r from-primary via-primary/80 to-accent bg-clip-text">
-            Digital Excellence
+            Explore Our Services
           </span>
         </motion.h1>
 
@@ -109,41 +101,12 @@ export default function Hero2() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="max-w-3xl mx-auto mb-10 text-lg sm:text-xl text-muted-foreground text-balance"
         >
-          At Quintessential Technologies, we deliver cutting-edge technology solutions
-          that empower businesses to thrive in the digital age. From software development
-          to cloud solutions, we're your trusted partner in innovation.
+           Our expert consulting team delivers strategic guidance and tailored business solutions to help companies achieve measurable growth, improve operational efficiency, and stay competitive in today’s market.
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="flex flex-col items-center justify-center gap-4 sm:flex-row"
-        >
-          <motion.div 
-            whileHover={{ scale: 1.05 }} 
-            whileTap={{ scale: 0.98 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          >
-            <Button size="lg" className="transition-shadow shadow-lg group shadow-primary/20 hover:shadow-xl hover:shadow-primary/30" asChild>
-              <a href="#contact">
-                Get Started
-                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-              </a>
-            </Button>
-          </motion.div>
-          <motion.div 
-            whileHover={{ scale: 1.05 }} 
-            whileTap={{ scale: 0.98 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          >
-            <Button size="lg" variant="secondary" className="transition-shadow shadow-md hover:shadow-lg" asChild>
-              <a href="#services">Explore Services</a>
-            </Button>
-          </motion.div>
-        </motion.div>
+        
 
-        {/* Stats */}
+        {/* Stats 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -172,6 +135,7 @@ export default function Hero2() {
             </motion.div>
           ))}
         </motion.div>
+        */}
       </motion.div>
     </section>
   );

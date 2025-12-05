@@ -21,7 +21,7 @@ export default function Navigation() {
   }, []);
 
   const navItems: NavItem[] = [
-    { name: "Home", href: "#home" },
+    { name: "Home", href: "/" },
     { name: "About", href: "/aboutDetails" },
     { name: "Services", href: "/servicesDetails" },
     { name: "Solutions", href: "#solutions" },
@@ -30,6 +30,7 @@ export default function Navigation() {
   ];
 
   return (
+    
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}

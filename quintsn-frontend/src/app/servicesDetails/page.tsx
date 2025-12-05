@@ -1,6 +1,6 @@
 "use client";
 import Navigation from "@/components/navigation";
-import RaysBackground from "@/components/ui/serviceHero";
+import RaysBackground from "@/components/ui/raysBackground";
 
 export default function Home() {
   return (

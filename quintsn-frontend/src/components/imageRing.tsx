@@ -1,5 +1,5 @@
 import ThreeDImageRing from "./ui/imageRing";
-import RaysBackground from "./ui/serviceHero";
+import RaysBackground from "./ui/raysBackground";
 
 
 export default function ImageRing() {
@@ -14,10 +14,6 @@ export default function ImageRing() {
           "/img/img4.png",
           "/img/img5.png",
           "/img/img6.png",
-          "/img/img6.png",
-          "/img/img6.png",
-          "/img/img1.png",
-        
           "/img/img8.png",
           "/img/img9.png",
         ]}

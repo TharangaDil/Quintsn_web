@@ -16,9 +16,22 @@
   --border: 214 32% 91%;
   --muted: 210 40% 96.1%;
   --muted-foreground: 215 16% 46%;
-  
+}
 
+@keyframes shine {
+  0% {
+    left: -75%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    left: 125%;
+    opacity: 0;
+  }
+}
 
-
-
+.animate-shine {
+  animation: shine 1.2s linear infinite;
 }
