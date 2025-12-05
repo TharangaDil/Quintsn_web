@@ -8,6 +8,7 @@ import Mission from "../../components/mission";
 import Navigation from "@/components/navigation";
 import Hero2 from "@/components/hero2";
 import Footer from "@/components/footer";
+import AboutHero from "@/components/ui/aboutHero";
 
 
 export default function AboutDetails() {
@@ -25,7 +26,7 @@ export default function AboutDetails() {
   const y = useTransform(scrollYProgress, [0, 0.3], [100, 0]);
 
   return (
-    
+    <>
     <section
       id="about"
       ref={sectionRef}
@@ -48,22 +49,10 @@ export default function AboutDetails() {
           className="mb-16 text-center"
         >
           <Navigation/>
-          <Hero2/>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={
-              isInView
-                ? { opacity: 1, scale: 1 }
-                : { opacity: 0, scale: 0.8 }
-            }
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary"
-          >
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            About Us
-          </motion.div>
+          <AboutHero/>
+          
 
-          <h2 className="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl text-foreground">
+          <h2 className="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl text-foreground mt-20">
             Who We Are
           </h2>
 
@@ -194,11 +183,14 @@ export default function AboutDetails() {
           </motion.div>
         </motion.div>
         <Mission/>
-        <Footer/>
+        
       </div>
       </div>
       
     </section>
+    <Footer/>
+
+    </>
     
   );
 }

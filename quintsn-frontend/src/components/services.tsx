@@ -33,24 +33,24 @@ export default function Services() {
       icon: Code2,
       title: "Business Consultancy",
       description:
-        "Tailored software solutions built to meet your specific business requirements, from web applications to enterprise systems.",
-      features: ["Agile Development", "Full-Stack Expertise", "Scalable Architecture"],
+        "We analyse your current systems and workflows to identify opportunities for optimisation and growth",
+      features: [],
       route: "/businessConsultant",
     },
     {
       icon: Cloud,
       title: "Application Implementation Maintenance & Support",
       description:
-        "Comprehensive cloud services including migration, optimization, and management across AWS, Azure, and Google Cloud platforms.",
-      features: ["Cloud Migration", "Infrastructure Setup", "Cost Optimization"],
+        "Our team ensures a smooth transition and provides ongoing support to maximise your ROI and achieve long-term success.",
+      features: [],
       route: "/app-maintenance",
     },
     {
       icon: Smartphone,
       title: "Application Development",
       description:
-        "Native and cross-platform mobile applications that deliver exceptional user experiences on iOS and Android devices.",
-      features: ["iOS & Android", "React Native", "UI/UX Design"],
+        "We go beyond simply recommending ERP systems. We develop a customised plan that integrates seamlessly with your existing infrastructure and empowers your team..",
+      features: [],
       route: "/app-development",
     },
     {

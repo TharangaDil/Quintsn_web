@@ -1,26 +1,25 @@
+"use client";
+
 import ThreeDImageRing from "./ui/imageRing";
 import RaysBackground from "./ui/raysBackground";
 
-
 export default function ImageRing() {
+  const items = [
+    { url: "/img/img1.png", label: "Home", href: "/" },
+    { url: "/img/img2.png", label: "About", href: "/aboutDetails" },
+    { url: "/img/img3.png", label: "Services", href: "/servicesDetails" },
+    { url: "/img/img4.png", label: "Business Consultancy", href: "/businessConsultant" },
+    { url: "/img/img5.png", label: "Contact", href: "/" },
+    { url: "/img/img6.png", label: "Blog", href: "/" },
+    { url: "/img/img8.png", label: "Support", href: "/" },
+    { url: "/img/img9.png", label: "Careers", href: "/" },
+  ];
+
   return (
-    <div className="flex items-center justify-center h-screen bg-black">
-      <RaysBackground></RaysBackground>
-      <ThreeDImageRing
-        images={[
-          "/img/img1.png",
-          "/img/img2.png",
-          "/img/img3.png",
-          "/img/img4.png",
-          "/img/img5.png",
-          "/img/img6.png",
-          "/img/img8.png",
-          "/img/img9.png",
-        ]}
-        width={350}
-        imageDistance={600}
-        backgroundColor="#6EECA0"
-      />
-    </div>
+    <div className="w-full h-[600px] gradient-animate">
+      <RaysBackground/>
+  <ThreeDImageRing images={items} />
+</div>
+
   );
 }

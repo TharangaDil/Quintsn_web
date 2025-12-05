@@ -75,8 +75,8 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="border-t bg-linear-to-b from-accent/5 to-background border-border/50">
-      <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 sm:py-16">
+    <footer className="border-t bg-linear-to-b from-accent/5 to-background border-border/50 gradient-animate">
+      <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 sm:py-16 " >
         <div className="grid grid-cols-1 gap-8 mb-12 md:grid-cols-2 lg:grid-cols-5 lg:gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">

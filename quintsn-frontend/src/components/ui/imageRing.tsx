@@ -1,18 +1,11 @@
 "use client";
 
-import React, {
-  useEffect,
-  useRef,
-  useState,
-  useMemo,
-  MouseEvent as ReactMouseEvent,
-  TouchEvent as ReactTouchEvent,
-} from "react";
+import React, { useRef, useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence, useMotionValue, animate, easeOut } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation";
 
 export interface ThreeDImageRingProps {
-  images: string[];
+  images: { url: string; label: string; href: string }[];
   width?: number;
   perspective?: number;
   imageDistance?: number;
@@ -24,8 +17,8 @@ export interface ThreeDImageRingProps {
   ringClassName?: string;
   imageClassName?: string;
   backgroundColor?: string;
+  backgroundImage?: string; 
   draggable?: boolean;
-  ease?: string;
   mobileBreakpoint?: number;
   mobileScaleFactor?: number;
   inertiaPower?: number;
@@ -46,14 +39,15 @@ export default function ThreeDImageRing({
   ringClassName,
   imageClassName,
   backgroundColor,
+  backgroundImage,
   draggable = true,
-  ease = "easeOut",
   mobileBreakpoint = 768,
   mobileScaleFactor = 0.8,
   inertiaPower = 0.8,
   inertiaTimeConstant = 300,
   inertiaVelocityMultiplier = 20,
 }: ThreeDImageRingProps) {
+  const router = useRouter();
   const containerRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
 
@@ -102,53 +96,35 @@ export default function ThreeDImageRing({
     setShowImages(true);
   }, []);
 
-  // DRAG START
-  const handleDragStart = (e: ReactMouseEvent | ReactTouchEvent) => {
+  // DRAG HANDLERS
+  const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
     if (!draggable) return;
     isDragging.current = true;
-
-    const clientX =
-      "touches" in e ? e.touches[0].clientX : (e as ReactMouseEvent).clientX;
-
+    const clientX = "touches" in e ? e.touches[0].clientX : e.clientX;
     startX.current = clientX;
-
     rotationY.stop();
     velocity.current = 0;
-
     if (ringRef.current) ringRef.current.style.cursor = "grabbing";
-
     document.addEventListener("mousemove", handleDrag);
     document.addEventListener("mouseup", handleDragEnd);
     document.addEventListener("touchmove", handleDrag);
     document.addEventListener("touchend", handleDragEnd);
   };
 
-  // DRAG MOVE
   const handleDrag = (e: MouseEvent | TouchEvent) => {
     if (!draggable || !isDragging.current) return;
-
     const clientX =
       "touches" in e ? (e as TouchEvent).touches[0].clientX : (e as MouseEvent).clientX;
-
     const deltaX = clientX - startX.current;
-
     velocity.current = -deltaX * 0.5;
-
     rotationY.set(currentRotationY.current + velocity.current);
-
     startX.current = clientX;
   };
 
-  // DRAG END + INERTIA
   const handleDragEnd = () => {
     isDragging.current = false;
-
-    if (ringRef.current) {
-      ringRef.current.style.cursor = "grab";
-    }
-
+    if (ringRef.current) ringRef.current.style.cursor = "grab";
     currentRotationY.current = rotationY.get();
-
     document.removeEventListener("mousemove", handleDrag);
     document.removeEventListener("mouseup", handleDragEnd);
     document.removeEventListener("touchmove", handleDrag);
@@ -179,12 +155,13 @@ export default function ThreeDImageRing({
   return (
     <div
       ref={containerRef}
-      className={cn(
-        "w-full h-full overflow-hidden relative select-none",
-        containerClassName
-      )}
+      className={`w-full h-full overflow-hidden relative select-none ${containerClassName || ""}`}
       style={{
         backgroundColor,
+        backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined,
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
         transform: `scale(${currentScale})`,
         transformOrigin: "center",
       }}
@@ -204,7 +181,7 @@ export default function ThreeDImageRing({
       >
         <motion.div
           ref={ringRef}
-          className={cn("absolute w-full h-full", ringClassName)}
+          className={`absolute w-full h-full ${ringClassName || ""}`}
           style={{
             transformStyle: "preserve-3d",
             rotateY: rotationY,
@@ -213,24 +190,20 @@ export default function ThreeDImageRing({
         >
           <AnimatePresence>
             {showImages &&
-              images.map((imageUrl, i) => (
+              images.map((item, i) => (
                 <motion.div
                   key={i}
-                  className={cn("absolute w-full h-full", imageClassName)}
+                  className={`absolute w-full h-full group cursor-pointer ${imageClassName || ""}`}
                   style={{
                     transformStyle: "preserve-3d",
-                    backgroundImage: `url(${imageUrl})`,
+                    backgroundImage: `url(${item.url})`,
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat",
                     backfaceVisibility: "hidden",
                     rotateY: i * -angle,
                     z: -imageDistance * currentScale,
                     transformOrigin: `50% 50% ${imageDistance * currentScale}px`,
-                    backgroundPosition: getBgPos(
-                      i,
-                      currentRotationY.current,
-                      currentScale
-                    ),
+                    backgroundPosition: getBgPos(i, currentRotationY.current, currentScale),
                   }}
                   initial="hidden"
                   animate="visible"
@@ -241,7 +214,7 @@ export default function ThreeDImageRing({
                     duration: animationDuration,
                     ease: easeOut,
                   }}
-                  whileHover={{ opacity: 1 }}
+                  onClick={() => router.push(item.href)}
                   onHoverStart={() => {
                     if (isDragging.current) return;
                     if (!ringRef.current) return;
@@ -255,7 +228,12 @@ export default function ThreeDImageRing({
                       (el as HTMLElement).style.opacity = "1";
                     });
                   }}
-                />
+                >
+                  {/* Hover Label */}
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-3xl font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-xl">
+                    {item.label}
+                  </div>
+                </motion.div>
               ))}
           </AnimatePresence>
         </motion.div>
