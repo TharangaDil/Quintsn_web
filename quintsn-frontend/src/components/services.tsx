@@ -43,7 +43,7 @@ export default function Services() {
       description:
         "Our team ensures a smooth transition and provides ongoing support to maximise your ROI and achieve long-term success.",
       features: [],
-      route: "/app-maintenance",
+      route: "/appMaintenance",
     },
     {
       icon: Smartphone,
