@@ -13,7 +13,7 @@ import AppHero from "@/components/ui/appHero";
 import ChooseUs from "@/components/ui/chooseUs";
 
 
-export default function AppMaintenance() {
+export default function AppDevelopment() {
   const sectionRef = useRef<HTMLElement | null>(null);
    const ref = useRef<HTMLDivElement | null>(null);
 

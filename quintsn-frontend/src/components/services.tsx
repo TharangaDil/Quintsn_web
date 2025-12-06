@@ -51,7 +51,7 @@ export default function Services() {
       description:
         "We go beyond simply recommending ERP systems. We develop a customised plan that integrates seamlessly with your existing infrastructure and empowers your team..",
       features: [],
-      route: "/app-development",
+      route: "/appDevelopment",
     },
     {
       icon: Database,
