@@ -39,13 +39,13 @@ export default function Products() {
     <section
       id="technologies"
       ref={sectionRef}
-      className="relative flex items-center min-h-screen px-6 py-24 overflow-hidden"
+      className="relative flex items-center min-h-screen px-6  overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0 bg-linear-to-b from-background via-muted/20 to-background" />
 
       <div className="container relative z-10 mx-auto">
-        <motion.div style={{ opacity, y }} className="space-y-16">
+        <motion.div style={{ opacity, y }} className="">
           {/* Header */}
           <div className="text-center">
            
@@ -54,7 +54,7 @@ export default function Products() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="mt-4 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl"
+              className=" text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl"
             >
               Products we offer
             </motion.h2>

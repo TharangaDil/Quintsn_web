@@ -6,7 +6,7 @@ import Image from "next/image";
 import Mission from "../../components/mission";
 
 import Navigation from "@/components/navigation";
-import Hero2 from "@/components/hero2";
+
 import Footer from "@/components/footer";
 import AboutHero from "@/components/ui/aboutHero";
 import AppHero from "@/components/ui/appHero";
