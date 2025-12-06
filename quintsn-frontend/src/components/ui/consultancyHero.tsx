@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Button } from "./button";
 
-export default function AppHero() {
+export default function ConsultancyHero() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -16,7 +16,7 @@ export default function AppHero() {
   return (
     <section ref={ref} id="home" className="relative flex items-center justify-center  overflow-hidden ">
       {/* Animated Background Shapes with Parallax */}
-      <motion.div style={{ y }} className="absolute inset-0 overflow-hidden  bg-app-maintence bg-cover bg-center bg-no-repeat">
+      <motion.div style={{ y }} className="absolute inset-0 overflow-hidden  bg-business-consultancy bg-cover bg-center bg-no-repeat">
         <motion.div
           className="absolute w-64 h-64 rounded-full top-20 left-10 bg-primary/5 blur-3xl"
           animate={{
@@ -91,7 +91,7 @@ export default function AppHero() {
         >
           {" "}
           <span className="text-transparent bg-gradient-to-r from-primary via-primary/80 to-accent bg-clip-text text-white">
-            Application Implementation Maintenance & Support
+            Explore Our Services
           </span>
         </motion.h1>
 
@@ -101,42 +101,11 @@ export default function AppHero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="max-w-3xl mx-auto mb-10 text-lg sm:text-xl text-muted-foreground text-balance text-white"
         >
-          We deliver scalable solutions and support services designed to meet your business needs, 
-          leveraging industry-leading tools and experienced consultants.
+         Our expert consulting team delivers strategic guidance and tailored business solutions to help companies achieve 
+         measurable growth, improve operational efficiency, and stay competitive in today’s market.
         </motion.p>
 
-        
-
-        {/* Stats 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="grid grid-cols-2 gap-6 mt-16 md:grid-cols-4 sm:gap-8 sm:mt-20"
-        >
-          {[
-            { label: "Years Experience", value: "10+" },
-            { label: "Projects Delivered", value: "500+" },
-            { label: "Happy Clients", value: "200+" },
-            { label: "Team Members", value: "50+" },
-          ].map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
-              className="p-4 transition-colors border sm:p-6 rounded-xl bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50"
-            >
-              <div className="mb-1 text-2xl font-bold sm:text-3xl md:text-4xl text-primary">
-                {stat.value}
-              </div>
-              <div className="text-xs sm:text-sm text-muted-foreground">
-                {stat.label}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-        */}
+    
       </motion.div>
     </section>
   );

@@ -3,15 +3,15 @@
 import { useRef } from "react";
 import { motion,useScroll,useTransform,useInView } from "framer-motion";
 import Image from "next/image";
-
+import Mission from "../../components/mission";
 
 import Navigation from "@/components/navigation";
 import Hero2 from "@/components/hero2";
 import Footer from "@/components/footer";
-import Technologies from "@/components/technologies";
-import Products from "@/components/products";
-import { ShineButton } from "@/components/ui/shineButton";
+import AboutHero from "@/components/ui/aboutHero";
+import AppHero from "@/components/ui/appHero";
 import ChooseUs from "@/components/ui/chooseUs";
+import ConsultancyHero from "@/components/ui/consultancyHero";
 
 
 export default function BussinessConsultant() {
@@ -52,92 +52,54 @@ export default function BussinessConsultant() {
           className="mb-16 text-center"
         >
           <Navigation/>
-          <Hero2/>
-          {/*}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={
-              isInView
-                ? { opacity: 1, scale: 1 }
-                : { opacity: 0, scale: 0.8 }
-            }
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary"
-          >
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            Bussiness Consultancy
-          </motion.div>*/}
+          <ConsultancyHero/>
+          
 
+          
         </motion.div>
 
-      <div className="container relative z-10 mx-auto">
+
+
+    {/*second*/}
+      <div className="container relative z-10 mx-auto mt-20">
         
 
         <motion.div
           style={{ opacity, y }}
           className="grid items-center gap-12 md:grid-cols-2 lg:gap-20"
         >
-          
-          {/* Text Section */}
-          <motion.div className="space-y-6">
-            
-            {/* Image Section */}
           <motion.div
-            className="relative"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <motion.div
-              className="relative overflow-hidden shadow-2xl rounded-2xl"
+              className="relative overflow-hidden shadow-2xl rounded-2xl ml-[60px]"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
               <Image
                 src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80"
                 alt="Team collaboration"
-                width={800}
-                height={500}
-                className="w-full h-[500px] object-cover"
+                width={200}
+                height={150}
+                className="w-full  object-cover"
               />
               <div className="absolute inset-0 bg-linear-to-t from-background/80 via-transparent to-transparent" />
-              
             </motion.div>
 
-
-            
-
-            
-          </motion.div>
-
-          
-            {/* Floating Glow */}
-            <motion.div
-              className="absolute -bottom-6 -right-6 w-32 h-32 bg-linear-to-br from-[oklch(0.62_0.18_195)] to-[oklch(0.55_0.15_200)] rounded-full blur-3xl opacity-30"
-              animate={{
-                scale: [1, 1.2, 1],
-                opacity: [0.3, 0.5, 0.3],
-              }}
-              transition={{ duration: 4, repeat: Infinity }}
-            />
-          </motion.div>
+          {/* Text Section */}
           <motion.div className="space-y-6">
-           
+            
 
             <motion.h2
-              className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl"
+              className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl ml-[60px]"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
              We are at your Service{" "}
-              
+            
             </motion.h2>
 
             <motion.div
-              className="space-y-4 text-lg leading-relaxed text-muted-foreground text-justify mr-5"
+              className="space-y-4 text-lg leading-relaxed text-muted-foreground ml-[60px]"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -157,26 +119,45 @@ export default function BussinessConsultant() {
                 powerful and efficient application/ERP system.
               </p>
               
+              
             </motion.div>
 
-           
+            
           </motion.div>
-        
+
+          {/* Image Section */}
+          <motion.div
+            className="relative"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            
+            {/* Floating Glow */}
+            <motion.div
+              className="absolute -bottom-6 -right-6 w-32 h-32 bg-linear-to-br from-[oklch(0.62_0.18_195)] to-[oklch(0.55_0.15_200)] rounded-full blur-3xl opacity-30"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.3, 0.5, 0.3],
+              }}
+              transition={{ duration: 4, repeat: Infinity }}
+            />
+          </motion.div>
         </motion.div>
         
-
+        
       </div>
 
-
-      <ChooseUs/>
-
-
-      </div>
       
+    
+      </div>
       
     </section>
+    <ChooseUs/>
     <Footer/>
-    
+
     </>
+    
   );
 }

@@ -10,6 +10,7 @@ import Hero2 from "@/components/hero2";
 import Footer from "@/components/footer";
 import AboutHero from "@/components/ui/aboutHero";
 import AppHero from "@/components/ui/appHero";
+import ChooseUs from "@/components/ui/chooseUs";
 
 
 export default function AboutDetails() {
@@ -53,16 +54,7 @@ export default function AboutDetails() {
           <AppHero/>
           
 
-          <h2 className="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl text-foreground mt-20">
-            Who We Are
-          </h2>
-
-          <p className="max-w-3xl mx-auto text-lg text-muted-foreground">
-            Quintessential Technologies is a leading technology solutions
-            provider, dedicated to transforming businesses through innovative
-            software development, cloud solutions, and digital transformation
-            services.
-          </p>
+          
         </motion.div>
 
       <div className="container relative z-10 mx-auto">
@@ -75,78 +67,38 @@ export default function AboutDetails() {
           
           {/* Text Section */}
           <motion.div className="space-y-6">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <span className="text-sm font-semibold tracking-widest uppercase bg-linear-to-r from-[oklch(0.62_0.18_195)] to-[oklch(0.55_0.15_200)] bg-clip-text text-transparent">
-                About Us
-              </span>
-            </motion.div>
+            
 
             <motion.h2
-              className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl"
+              className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl ml-[60px]"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-             Unleash Growth. Your Trusted Partner in Business Technology Transformation.{" "}
-              <span className="bg-linear-to-r from-[oklch(0.62_0.18_195)] to-[oklch(0.55_0.15_200)] bg-clip-text text-transparent">
-                Technology
-              </span>
+             Application Implementation{" "}
+            
             </motion.h2>
 
             <motion.div
-              className="space-y-4 text-lg leading-relaxed text-muted-foreground"
+              className="space-y-4 text-lg leading-relaxed text-muted-foreground ml-[60px]"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <p>
-                Quintessential goes beyond software. We’re a team of certified consultants, passionate about empowering businesses across MENA, North America, and MEA. We act as an extension of your team, bringing deep industry knowledge and extensive expertise in business technology solutions to the table.
+                Our consultants will guide you through the entire implementation process, from planning to deployment. 
+                We work with you to ensure that your ERP system/application is tailored to your business needs and is 
+                integrated with your existing systems as required.
 
 
               </p>
-              <p>
-                We believe technology is a strategic tool, not just software. It’s the key to unlocking your full
-                potential and achieving operational excellence.
-              </p>
+              
               
             </motion.div>
 
-            {/* Stats */}
-            <motion.div
-              className="flex gap-8 pt-4"
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-            >
-              <div>
-                <div className="text-4xl font-bold bg-linear-to-r from-[oklch(0.62_0.18_195)] to-[oklch(0.55_0.15_200)] bg-clip-text text-transparent">
-                  10+
-                </div>
-                <div className="mt-1 text-sm text-muted-foreground">Business Consultancy</div>
-              </div>
-
-              <div>
-                <div className="text-4xl font-bold bg-linear-to-r from-[oklch(0.62_0.18_195)] to-[oklch(0.55_0.15_200)] bg-clip-text text-transparent">
-                  200+
-                </div>
-                <div className="mt-1 text-sm text-muted-foreground">Application Implementation & Support</div>
-              </div>
-
-              <div>
-                <div className="text-4xl font-bold bg-linear-to-r from-[oklch(0.62_0.18_195)] to-[oklch(0.55_0.15_200)] bg-clip-text text-transparent">
-                  50+
-                </div>
-                <div className="mt-1 text-sm text-muted-foreground">Application Development</div>
-              </div>
-            </motion.div>
+            
           </motion.div>
 
           {/* Image Section */}
@@ -158,16 +110,16 @@ export default function AboutDetails() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <motion.div
-              className="relative overflow-hidden shadow-2xl rounded-2xl"
+              className="relative overflow-hidden shadow-2xl rounded-2xl mr-[60px]"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
               <Image
                 src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80"
                 alt="Team collaboration"
-                width={800}
-                height={500}
-                className="w-full h-[500px] object-cover"
+                width={200}
+                height={150}
+                className="w-full  object-cover"
               />
               <div className="absolute inset-0 bg-linear-to-t from-background/80 via-transparent to-transparent" />
             </motion.div>
@@ -183,12 +135,258 @@ export default function AboutDetails() {
             />
           </motion.div>
         </motion.div>
-        <Mission/>
+        
+        
+      </div>
+
+    {/*second*/}
+      <div className="container relative z-10 mx-auto mt-20">
+        
+
+        <motion.div
+          style={{ opacity, y }}
+          className="grid items-center gap-12 md:grid-cols-2 lg:gap-20"
+        >
+          <motion.div
+              className="relative overflow-hidden shadow-2xl rounded-2xl ml-[60px]"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Image
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80"
+                alt="Team collaboration"
+                width={200}
+                height={150}
+                className="w-full  object-cover"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-background/80 via-transparent to-transparent" />
+            </motion.div>
+
+          {/* Text Section */}
+          <motion.div className="space-y-6">
+            
+
+            <motion.h2
+              className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl ml-[60px]"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+             Application Optimization{" "}
+            
+            </motion.h2>
+
+            <motion.div
+              className="space-y-4 text-lg leading-relaxed text-muted-foreground ml-[60px]"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <p>
+                We help you get the most out of your ERP system by identifying areas for improvement and implementing 
+                solutions to increase efficiency and productivity.
+
+
+              </p>
+              
+              
+            </motion.div>
+
+            
+          </motion.div>
+
+          {/* Image Section */}
+          <motion.div
+            className="relative"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            
+            {/* Floating Glow */}
+            <motion.div
+              className="absolute -bottom-6 -right-6 w-32 h-32 bg-linear-to-br from-[oklch(0.62_0.18_195)] to-[oklch(0.55_0.15_200)] rounded-full blur-3xl opacity-30"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.3, 0.5, 0.3],
+              }}
+              transition={{ duration: 4, repeat: Infinity }}
+            />
+          </motion.div>
+        </motion.div>
+        
+        
+      </div>
+
+      {/*Third*/}
+       <div className="container relative z-10 mx-auto mt-10">
+        
+
+        <motion.div
+          style={{ opacity, y }}
+          className="grid items-center gap-12 md:grid-cols-2 lg:gap-20"
+        >
+          
+          {/* Text Section */}
+          <motion.div className="space-y-6">
+            
+
+            <motion.h2
+              className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl ml-[60px]"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+             Support{" "}
+            
+            </motion.h2>
+
+            <motion.div
+              className="space-y-4 text-lg leading-relaxed text-muted-foreground ml-[60px]"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <p>
+                Our team provides ongoing support and maintenance for your ERP system to ensure it continues to operate 
+                smoothly and effectively.
+
+
+              </p>
+              
+              
+            </motion.div>
+
+            
+          </motion.div>
+
+          {/* Image Section */}
+          <motion.div
+            className="relative"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <motion.div
+              className="relative overflow-hidden shadow-2xl rounded-2xl mr-[60px]"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Image
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80"
+                alt="Team collaboration"
+                width={200}
+                height={150}
+                className="w-full  object-cover"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-background/80 via-transparent to-transparent" />
+            </motion.div>
+
+            {/* Floating Glow */}
+            <motion.div
+              className="absolute -bottom-6 -right-6 w-32 h-32 bg-linear-to-br from-[oklch(0.62_0.18_195)] to-[oklch(0.55_0.15_200)] rounded-full blur-3xl opacity-30"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.3, 0.5, 0.3],
+              }}
+              transition={{ duration: 4, repeat: Infinity }}
+            />
+          </motion.div>
+        </motion.div>
+        
+        
+      </div>
+
+    {/*fourth*/}
+      <div className="container relative z-10 mx-auto mt-20">
+        
+
+        <motion.div
+          style={{ opacity, y }}
+          className="grid items-center gap-12 md:grid-cols-2 lg:gap-20"
+        >
+          <motion.div
+              className="relative overflow-hidden shadow-2xl rounded-2xl ml-[60px]"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Image
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80"
+                alt="Team collaboration"
+                width={200}
+                height={150}
+                className="w-full  object-cover"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-background/80 via-transparent to-transparent" />
+            </motion.div>
+
+          {/* Text Section */}
+          <motion.div className="space-y-6">
+            
+
+            <motion.h2
+              className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl ml-[60px]"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+             Training{" "}
+            
+            </motion.h2>
+
+            <motion.div
+              className="space-y-4 text-lg leading-relaxed text-muted-foreground ml-[60px]"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <p>
+                We offer training sessions for your employees to help them learn how to use the ERP system efficiently and effectively.
+
+
+              </p>
+              
+              
+            </motion.div>
+
+            
+          </motion.div>
+
+          {/* Image Section */}
+          <motion.div
+            className="relative"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            
+            {/* Floating Glow */}
+            <motion.div
+              className="absolute -bottom-6 -right-6 w-32 h-32 bg-linear-to-br from-[oklch(0.62_0.18_195)] to-[oklch(0.55_0.15_200)] rounded-full blur-3xl opacity-30"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.3, 0.5, 0.3],
+              }}
+              transition={{ duration: 4, repeat: Infinity }}
+            />
+          </motion.div>
+        </motion.div>
+        
         
       </div>
       </div>
       
     </section>
+    <ChooseUs/>
     <Footer/>
 
     </>
