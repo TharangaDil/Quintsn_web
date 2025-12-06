@@ -386,7 +386,7 @@ export default function AppMaintenance() {
       </div>
       
     </section>
-    <ChooseUs/>
+   <ChooseUs/>
     <Footer/>
 
     </>
