@@ -45,7 +45,7 @@ export default function Products() {
       <div className="absolute inset-0 bg-linear-to-b from-background via-muted/20 to-background" />
 
       <div className="container relative z-10 mx-auto">
-        <motion.div style={{ opacity, y }} className="">
+        <motion.div style={{ opacity, y }} className="space-y-16">
           {/* Header */}
           <div className="text-center">
            
@@ -54,7 +54,7 @@ export default function Products() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className=" text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl"
+              className="mt-4 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl"
             >
               Products we offer
             </motion.h2>

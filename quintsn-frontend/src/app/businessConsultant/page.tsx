@@ -10,6 +10,7 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import ChooseUs from "@/components/ui/chooseUs";
 import ConsultancyHero from "@/components/ui/consultancyHero";
+import SelectedUs from "@/components/ui/selectedUs";
 
 
 export default function BussinessConsultant() {
@@ -143,16 +144,16 @@ export default function BussinessConsultant() {
             />
           </motion.div>
         </motion.div>
-        
+        <SelectedUs/>
         
       </div>
 
-      
+   
     
       </div>
       
     </section>
-    <ChooseUs/>
+   
     <Footer/>
 
     </>
