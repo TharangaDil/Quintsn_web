@@ -35,7 +35,7 @@ export default function Footer() {
       { name: "Contact Us", href: "/contact" },
     ],
     Applications: [
-      { name: "SAP Business Onet", href: "#services" },
+      { name: "SAP Business One", href: "#services" },
       { name: "SAP by Design", href: "#services" },
       { name: "Microsoft Dynamic 365", href: "#services" },
       { name: "SAGE ERP 300", href: "#services" },

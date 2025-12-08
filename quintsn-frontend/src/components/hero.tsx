@@ -59,6 +59,9 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative w-full h-screen overflow-hidden">
+      <head>
+        <title>ERP & CRM Consulting Services - Quintessential Technologies</title>
+      </head>
       {/* ✅ Background Slideshow */}
       {heroImages.map((image: string, index: number) => (
         <motion.div
@@ -80,6 +83,8 @@ export default function Hero() {
           />
         </motion.div>
       ))}
+
+      
 
       {/* ✅ Content */}
       <motion.div

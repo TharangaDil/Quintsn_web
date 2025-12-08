@@ -32,6 +32,9 @@ export default function AppDevelopment() {
       ref={sectionRef}
       className="relative flex items-center min-h-screen px-6 py-24 overflow-hidden"
     >
+      <head>
+        <title>Application Development UAE | Custom Mobile & Web Apps by QT</title>
+      </head>
      
       {/* Parallax Background */}
       <motion.div

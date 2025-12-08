@@ -238,12 +238,10 @@ const FAQ: React.FC = () => {
               boxShadow: "0 0 30px rgba(0, 217, 255, 0.4)",
             }}
             whileTap={{ scale: 0.95 }}
-            onClick={() =>
-              document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
-            }
+            
             className="px-8 py-4 rounded-full bg-gradient-to-r from-[oklch(0.62_0.18_195)] to-[oklch(0.55_0.15_200)] text-white font-semibold shadow-xl"
           >
-            Get in Touch
+           <a href="/contact"> Get in Touch</a>
           </motion.button>
           
         </motion.div>

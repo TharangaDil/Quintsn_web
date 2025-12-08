@@ -49,6 +49,7 @@ export default function HomePage() {
      
       <Footer />
       <ScrollToTop />
+      
      
     </motion.div>
   );

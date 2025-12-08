@@ -32,6 +32,9 @@ export default function AboutDetails() {
       ref={sectionRef}
       className="relative flex items-center min-h-screen px-6 py-24 overflow-hidden"
     >
+      <head>
+        <title>About Us | Business Technology Consultancy in UAE – QT</title>
+      </head>
      
       {/* Parallax Background */}
       <motion.div

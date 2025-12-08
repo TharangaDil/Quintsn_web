@@ -35,6 +35,9 @@ export default function AppMaintenance() {
       ref={sectionRef}
       className="relative flex items-center min-h-screen px-6 py-24 overflow-hidden"
     >
+      <head>
+        <title>Application Implementation UAE | Support & Maintenance by QT</title>
+      </head>
      
       {/* Parallax Background */}
       <motion.div

@@ -5,14 +5,14 @@ import ThreeDImageRing from "./ui/imageRing";
 
 export default function ImageRing() {
   const items = [
-    { url: "/img/img1.png", label: "Home", href: "/" },
-    { url: "/img/img2.png", label: "About", href: "/aboutDetails" },
-    { url: "/img/img3.png", label: "Services", href: "/servicesDetails" },
-    { url: "/img/img4.png", label: "Business Consultancy", href: "/businessConsultant" },
-    { url: "/img/img5.png", label: "Contact", href: "/" },
-    { url: "/img/img6.png", label: "Blog", href: "/" },
-    { url: "/img/img8.png", label: "Support", href: "/" },
-    { url: "/img/img9.png", label: "Careers", href: "/" },
+    { url: "/img/img1.png", label: "Services", href: "/serviceDetails" },
+    { url: "/img/img2.png", label: "Blog", href: "/blog" },
+    { url: "/img/img3.png", label: "SAP Business One", href: "/servicesDetails" },
+    { url: "/img/img4.png", label: "SAP by Design", href: "/businessConsultant" },
+    { url: "/img/img5.png", label: "Microsoft Dynamic 365", href: "/" },
+    { url: "/img/img6.png", label: "SAGE ERP 300", href: "/blog" },
+    { url: "/img/img8.png", label: "Oracle Netsuit", href: "/servicesDetails" },
+    
   ];
 
   return (

@@ -34,25 +34,25 @@ export default function Navigation() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gray-200 ${
         isScrolled
           ? "bg-background/95 backdrop-blur-md shadow-sm border-b border-border"
           : "bg-transparent"
       }`}
     >
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 overflow-hidden">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 overflow-hidden ">
+        <div className="flex items-center justify-between h-16 sm:h-20 ">
           {/* Logo */}
           <a href="/" className="flex items-center space-x-2 group">
             <motion.div 
               whileHover={{ scale: 1.05 }} 
               className="flex items-center"
             >
-              <div className="flex items-center justify-center w-8 h-8 overflow-hidden rounded-lg sm:w-40 sm:h-10">
+              <div className="flex items-center justify-center w-28 h-10 overflow-hidden rounded-lg sm:w-40 sm:h-10">
                 <img 
                   src="/img/logo.png"   
                   alt="Logo"
-                  className="object-contain w-full h-full"
+                  className="object-contain "
                  />
               </div>
             </motion.div>

@@ -64,3 +64,55 @@
 .bg-contact{
   background-image: url('/img/contact.png');
 }
+/* Sidebar CSS */
+.social-sidebar {
+  position: fixed;
+  top: 45%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  z-index: 1000;
+}
+
+.social-sidebar a {
+  background-color: rgba(209, 209, 209, 0.8);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  border-radius: 5px 0 0 5px;
+  overflow: hidden;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.social-sidebar a i {
+  font-size: 18px;
+  width: 40px;
+  text-align: center;
+  padding-left: 25%;
+}
+
+.social-sidebar a span {
+  white-space: nowrap;
+  padding-right: 15px;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+  color: black;
+}
+
+.social-sidebar a:hover {
+  width: 150px;
+  background-color: white;
+}
+
+.social-sidebar a:hover span {
+  opacity: 1;
+  transform: translateX(0);
+}

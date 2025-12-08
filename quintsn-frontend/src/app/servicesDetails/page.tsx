@@ -24,6 +24,8 @@ export default function BussinessConsultant() {
   const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
   const y = useTransform(scrollYProgress, [0, 0.3], [100, 0]);
 
+  
+
   return (
     <>
     <section
@@ -31,6 +33,11 @@ export default function BussinessConsultant() {
       ref={sectionRef}
       className="relative flex items-center min-h-screen px-6 py-24 overflow-hidden"
     >
+      <head>
+        <title>
+          Services | Business Technology Consultancy in UAE – QT
+        </title>
+      </head>
      
       {/* Parallax Background */}
       <motion.div

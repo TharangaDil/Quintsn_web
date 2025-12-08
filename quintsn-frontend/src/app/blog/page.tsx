@@ -78,6 +78,10 @@ export default function BlogPage() {
     <section className="px-6 py-20 bg-gray-50 min-h-screen">
         <Navigation/>
         <BlogHero/>
+        
+        <head>
+          <title>Business Technology Blog UAE | Quintessential Technologies</title>
+        </head>
       <div className="container mx-auto max-w-7xl mt-20">
         
        

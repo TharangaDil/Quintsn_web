@@ -29,6 +29,9 @@ export default function BussinessConsultant() {
         ref={sectionRef}
         className="relative flex items-center min-h-screen px-4 sm:px-6 lg:px-12 py-16 sm:py-24 overflow-hidden"
       >
+        <head>
+          <title>Business Consultancy UAE | Quintessential Technologies</title>
+        </head>
         {/* Background */}
         <motion.div
           className="absolute inset-0 bg-linear-to-b from-background via-muted/30 to-background"
