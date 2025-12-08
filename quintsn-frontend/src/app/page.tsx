@@ -32,7 +32,7 @@ export default function HomePage() {
     >
       <CustomCursor/>
       <ScrollProgress/>
-      <Navigation />
+      <Navigation/>
       
       <Hero/>
       <ImageRing/>
