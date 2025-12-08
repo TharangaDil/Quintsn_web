@@ -28,93 +28,96 @@ export default function Footer() {
 
   const footerLinks: Record<string, FooterLink[]> = {
     company: [
-      { name: "About Us", href: "#about" },
-      { name: "Mission & Vision", href: "#mission" },
-      { name: "Careers", href: "#" },
-      { name: "Blog", href: "#" },
+      { name: "Home", href: "/" },
+      { name: "About Us", href: "/aboutDetails" },
+      { name: "Services", href: "/servicesDetails" },
+      { name: "Blog", href: "/blog" },
+      { name: "Contact Us", href: "/contact" },
     ],
-    services: [
-      { name: "Software Development", href: "#services" },
-      { name: "Cloud Solutions", href: "#services" },
-      { name: "Mobile Apps", href: "#services" },
-      { name: "Consulting", href: "#services" },
+    Applications: [
+      { name: "SAP Business Onet", href: "#services" },
+      { name: "SAP by Design", href: "#services" },
+      { name: "Microsoft Dynamic 365", href: "#services" },
+      { name: "SAGE ERP 300", href: "#services" },
+      { name: "Oracle Netsuit", href: "#services" },
     ],
-    solutions: [
-      { name: "Enterprise", href: "#solutions" },
-      { name: "E-Commerce", href: "#solutions" },
-      { name: "Healthcare", href: "#solutions" },
-      { name: "Education", href: "#solutions" },
-    ],
+    
   };
 
   const socialLinks: SocialLink[] = [
     {
       icon: MessageCircle,
       name: "WhatsApp",
-      link: "https://wa.me/15551234567",
+      link: "https://wa.me/971561289803",
       color: "hover:text-green-600",
     },
     {
       icon: Facebook,
       name: "Facebook",
-      link: "https://facebook.com/quintessential",
+      link: "https://facebook.com/QuintessentialTechnologies",
       color: "hover:text-blue-600",
     },
     {
       icon: Instagram,
       name: "Instagram",
-      link: "https://instagram.com/quintessential",
+      link: "https://instagram.com/quintessentialtechnology",
       color: "hover:text-pink-600",
     },
     {
       icon: Linkedin,
       name: "LinkedIn",
-      link: "https://linkedin.com/company/quintessential",
+      link: "https://linkedin.com/company/quintessential-technologie",
       color: "hover:text-blue-700",
     },
   ];
 
   return (
-    <footer className="border-t bg-linear-to-b from-accent/5 to-background border-border/50 gradient-animate">
+    <footer className="border-t bg-linear-to-b from-accent/5 to-background border-border/50 bg-gray-200">
       <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 sm:py-16 " >
         <div className="grid grid-cols-1 gap-8 mb-12 md:grid-cols-2 lg:grid-cols-5 lg:gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center mb-4 space-x-2 group">
-              <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-linear-to-br from-primary to-primary/70">
-                <span className="text-lg font-bold text-primary-foreground">Q</span>
+              <div className="flex items-center justify-center w-[200px] rounded-lg bg-linear-to-br from-primary to-primary/70">
+                <span className="text-lg font-bold text-primary-foreground">
+                  <img 
+                  src="/img/logo.png"   
+                  alt="Logo"
+                  className="object-contain w-full h-full"
+                 />
+                </span>
               </div>
-              <span className="text-xl font-semibold text-foreground">
-                Quintessential Technologies
-              </span>
+              
             </Link>
-            <p className="mb-6 leading-relaxed text-muted-foreground">
-              Transforming businesses through innovative technology solutions.
-              Your trusted partner in digital excellence.
+            <p className="mb-6 leading-relaxed text-muted-foreground text-justify text-[14px] mr-10">
+              Quintessential Technologies: ERP and Business Technology Consulting for Growth. We empower Trading & 
+              Service companies across MENA, North America, and MEA
             </p>
 
-            {/* Contact Info */}
-            <div className="space-y-3 text-sm">
+            
+          </div>
+          {/* Contact Info */}
+            <div className="space-y-6 text-sm">
+              <h3 className="mb-4 font-semibold capitalize text-foreground">Contact</h3>
               <a
-                href="mailto:info@quintessential.com"
+                href="mailto:sales@quintsn.com"
                 className="flex items-center gap-2 transition-colors text-muted-foreground hover:text-primary"
               >
                 <Mail className="w-4 h-4" />
-                info@quintessential.com
+               sales@quintsn.com
               </a>
               <a
-                href="tel:+15551234567"
+                href="tel:+971 561 289 803"
                 className="flex items-center gap-2 transition-colors text-muted-foreground hover:text-primary"
               >
                 <Phone className="w-4 h-4" />
-                +1 (555) 123-4567
+                +971 561 289 803
               </a>
               <div className="flex items-start gap-2 text-muted-foreground">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                <span>123 Tech Street, Innovation City, TC 12345</span>
+                <span>No:401, Mohammad Saleh al GURG, Dubai, UAE.</span>
               </div>
             </div>
-          </div>
 
           {/* Footer Links */}
           {Object.entries(footerLinks).map(([section, links]) => (
@@ -137,11 +140,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="pt-8 border-t border-border/50">
+        <div className=" border-t border-border/50">
           <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
             {/* Copyright */}
-            <p className="text-sm text-center text-muted-foreground md:text-left">
-              © {currentYear} Quintessential Technologies. All rights reserved.
+            <p className="text-xs text-center text-muted-foreground md:text-left">
+              Copyright © {currentYear} ERP & CRM Consulting Services | Powered by ERP & CRM Consulting Services
             </p>
 
             {/* Social Links */}
