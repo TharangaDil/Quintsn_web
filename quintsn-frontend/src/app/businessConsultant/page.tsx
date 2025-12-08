@@ -3,12 +3,8 @@
 import { useRef } from "react";
 import { motion,useScroll,useTransform,useInView } from "framer-motion";
 import Image from "next/image";
-import Mission from "../../components/mission";
-
 import Navigation from "@/components/navigation";
-
 import Footer from "@/components/footer";
-import ChooseUs from "@/components/ui/chooseUs";
 import ConsultancyHero from "@/components/ui/consultancyHero";
 import SelectedUs from "@/components/ui/selectedUs";
 
@@ -67,21 +63,7 @@ export default function BussinessConsultant() {
           style={{ opacity, y }}
           className="grid items-center gap-12 md:grid-cols-2 lg:gap-20"
         >
-          <motion.div
-              className="relative overflow-hidden shadow-2xl rounded-2xl ml-[60px]"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Image
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80"
-                alt="Team collaboration"
-                width={200}
-                height={150}
-                className="w-full  object-cover"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-background/80 via-transparent to-transparent" />
-            </motion.div>
-
+          
           {/* Text Section */}
           <motion.div className="space-y-6">
             
@@ -98,7 +80,7 @@ export default function BussinessConsultant() {
             </motion.h2>
 
             <motion.div
-              className="space-y-4 text-lg leading-relaxed text-muted-foreground ml-[60px]"
+              className="space-y-4 text-lg leading-relaxed text-muted-foreground ml-[60px] text-justify"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -132,6 +114,21 @@ export default function BussinessConsultant() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
+            <motion.div
+              className="relative overflow-hidden shadow-2xl rounded-2xl mr-[60px]"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Image
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80"
+                alt="Team collaboration"
+                width={200}
+                height={150}
+                className="w-full  object-cover"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-background/80 via-transparent to-transparent" />
+            </motion.div>
+
             
             {/* Floating Glow */}
             <motion.div

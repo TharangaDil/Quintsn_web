@@ -24,9 +24,8 @@ export default function Navigation() {
     { name: "Home", href: "/" },
     { name: "About", href: "/aboutDetails" },
     { name: "Services", href: "/servicesDetails" },
-    { name: "Solutions", href: "#solutions" },
-    { name: "Team", href: "#team" },
-    { name: "Contact", href: "#contact" },
+    { name: "Blog", href: "/blog" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -75,7 +74,7 @@ export default function Navigation() {
               </motion.a>
             ))}
             <Button size="sm" className="ml-4" asChild>
-              <a href="#contact">Get Started</a>
+              <a href="/contact">Get Started</a>
             </Button>
           </div>
 

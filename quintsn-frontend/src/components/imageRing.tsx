@@ -1,7 +1,7 @@
 "use client";
 
 import ThreeDImageRing from "./ui/imageRing";
-import RaysBackground from "./ui/raysBackground";
+
 
 export default function ImageRing() {
   const items = [
@@ -16,8 +16,8 @@ export default function ImageRing() {
   ];
 
   return (
-    <div className="w-full h-[600px] gradient-animate">
-      <RaysBackground/>
+    <div className="w-full h-[600px] ">
+      
   <ThreeDImageRing images={items} />
 </div>
 

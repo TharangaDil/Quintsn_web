@@ -76,7 +76,7 @@ const FAQ: React.FC = () => {
     >
       {/* Background animation */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-[oklch(0.15_0.03_240)] via-[oklch(0.12_0.02_240)] to-[oklch(0.16_0.03_240)]"
+        className="absolute inset-0 bg-white ]"
         style={{ y: backgroundY }}
       />
 
@@ -112,11 +112,11 @@ const FAQ: React.FC = () => {
             Got Questions?
           </span>
 
-          <h2 className="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
+          <h2 className="text-4xl font-bold tracking-tight  md:text-5xl lg:text-6xl">
             Frequently Asked Questions
           </h2>
 
-          <p className="max-w-2xl mx-auto mt-4 text-lg text-white/70">
+          <p className="max-w-2xl mx-auto mt-4 text-lg ">
             Everything you need to know about working with us.
           </p>
         </motion.div>
@@ -230,7 +230,7 @@ const FAQ: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="mt-16 text-center"
         >
-          <p className="mb-6 text-white/70">Still have questions?</p>
+          <p className="mb-6 ">Still have questions?</p>
 
           <motion.button
             whileHover={{
@@ -245,6 +245,7 @@ const FAQ: React.FC = () => {
           >
             Get in Touch
           </motion.button>
+          
         </motion.div>
       </div>
     </section>

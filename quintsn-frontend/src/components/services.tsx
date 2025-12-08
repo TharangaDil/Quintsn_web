@@ -9,6 +9,7 @@ import {
   Cloud,
   Smartphone,
   Database,
+  Laptop
 } from "lucide-react";
 
 interface Service {
@@ -54,8 +55,8 @@ export default function Services() {
       route: "/appDevelopment",
     },
     {
-      icon: Database,
-      title: "Data Analytics & BI",
+      icon: Laptop,
+      title: "Digital Marketing",
       description:
         "Transform your data into actionable insights with advanced analytics and BI solutions.",
       features: ["Data Warehousing", "Real-time Analytics", "Custom Dashboards"],

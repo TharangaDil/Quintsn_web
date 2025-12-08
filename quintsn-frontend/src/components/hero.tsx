@@ -5,10 +5,10 @@ import { motion,useScroll,useTransform } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 const heroImages: string[] = [
-  "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80",
-  "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=80",
-  "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920&q=80",
-  "https://images.unsplash.com/photo-1639322537228-f710d846310a?w=1920&q=80",
+  "/img/tech.png",
+  "/img/tech2.png",
+  "/img/tech3.png",
+  "/img/tech4.png"
 ];
 
 export default function Hero() {
@@ -45,7 +45,7 @@ export default function Hero() {
           animate={{
             opacity: currentImageIndex === index ? 0.25 : 0,
           }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
+          transition={{ duration: 1, ease: "easeInOut" }}
           style={{ scale }}
         >
           <div
@@ -59,7 +59,7 @@ export default function Hero() {
       ))}
 
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
+      <div className=" " />
 
       {/* Content */}
       <motion.div

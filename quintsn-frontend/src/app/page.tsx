@@ -46,7 +46,7 @@ export default function HomePage() {
       <ClientLogos />
       <Testimonials />
      <FAQ/>
-      <Contact />
+     
       <Footer />
       <ScrollToTop />
      

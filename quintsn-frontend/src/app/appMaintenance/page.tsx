@@ -3,14 +3,15 @@
 import { useRef } from "react";
 import { motion,useScroll,useTransform,useInView } from "framer-motion";
 import Image from "next/image";
-import Mission from "../../components/mission";
+
 
 import Navigation from "@/components/navigation";
 
 import Footer from "@/components/footer";
-import AboutHero from "@/components/ui/aboutHero";
+
 import AppHero from "@/components/ui/appHero";
-import ChooseUs from "@/components/ui/chooseUs";
+
+import SelectedUs from "@/components/ui/selectedUs";
 
 
 export default function AppMaintenance() {
@@ -386,7 +387,7 @@ export default function AppMaintenance() {
       </div>
       
     </section>
-   <ChooseUs/>
+    <SelectedUs/>
     <Footer/>
 
     </>

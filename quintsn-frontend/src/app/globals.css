@@ -55,3 +55,12 @@
 .bg-business-consultancy{
   background-image: url('/img/consultancy.png');
 }
+.bg-app-development{
+  background-image: url('/img/development.png');
+}
+.bg-blog{
+  background-image: url('/img/blog.png');
+}
+.bg-contact{
+  background-image: url('/img/contact.png');
+}

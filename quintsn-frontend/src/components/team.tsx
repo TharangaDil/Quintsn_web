@@ -125,27 +125,7 @@ export default function Team() {
         </div>
 
         {/* Join CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-16 text-center"
-        >
-          <div className="inline-flex flex-col items-center gap-6 p-8 border sm:flex-row rounded-2xl bg-linear-to-r from-primary/5 via-accent/5 to-primary/5 border-border/50">
-            <div className="flex-1">
-              <h3 className="mb-2 text-xl font-semibold sm:text-2xl text-foreground">Want to Join Our Team?</h3>
-              <p className="text-muted-foreground">We're always looking for talented individuals to join our mission.</p>
-            </div>
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              className="px-8 py-3 font-medium transition-shadow rounded-lg bg-primary text-primary-foreground hover:shadow-lg hover:shadow-primary/30 whitespace-nowrap"
-            >
-              View Open Positions
-            </motion.a>
-          </div>
-        </motion.div>
+       
       </div>
     </section>
   );

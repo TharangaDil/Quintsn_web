@@ -26,9 +26,9 @@ export default function ClientLogos() {
   const duplicatedClients = [...clients, ...clients];
 
   return (
-    <section className="py-16 bg-background border-y border-border/50">
+    <section className=" ">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        {/* Heading */}
+        {/* Heading 
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -42,13 +42,10 @@ export default function ClientLogos() {
           <p className="text-sm text-muted-foreground">
             Join hundreds of successful businesses working with us
           </p>
-        </motion.div>
+        </motion.div>*/}
 
-        {/* Scrolling Logos */}
-        <div className="relative overflow-hidden">
-          {/* Gradient edges */}
-          <div className="absolute top-0 bottom-0 left-0 z-10 w-20 bg-linear-to-r from-background to-transparent" />
-          <div className="absolute top-0 bottom-0 right-0 z-10 w-20 bg-linear-to-l from-background to-transparent" />
+       
+          
 
           <motion.div
             className="flex gap-12"
@@ -77,7 +74,7 @@ export default function ClientLogos() {
               </motion.div>
             ))}
           </motion.div>
-        </div>
+        
       </div>
     </section>
   );
