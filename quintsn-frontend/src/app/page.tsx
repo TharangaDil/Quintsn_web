@@ -25,7 +25,7 @@ import ImageRing from "@/components/imageRing";
 export default function HomePage() {
   return (
     <motion.div
-      className="min-h-screen bg-background"
+      className="min-h-screen bg-background overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}

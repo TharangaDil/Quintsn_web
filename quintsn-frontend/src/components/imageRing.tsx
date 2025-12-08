@@ -16,7 +16,7 @@ export default function ImageRing() {
   ];
 
   return (
-    <div className="w-full h-[600px] ">
+    <div className="w-full h-[600px] overflow-hidden">
       
   <ThreeDImageRing images={items} />
 </div>

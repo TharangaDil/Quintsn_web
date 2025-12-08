@@ -40,7 +40,7 @@ export default function Navigation() {
           : "bg-transparent"
       }`}
     >
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 overflow-hidden">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <a href="/" className="flex items-center space-x-2 group">
