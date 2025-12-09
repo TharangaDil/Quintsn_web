@@ -27,10 +27,7 @@ export default function Team() {
     { name: "Sarah Mitchell", role: "CTO", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah1", bio: "Expert in cloud architecture and AI solutions.", social: { linkedin: "#", twitter: "#", email: "sarah@quintessential.com" } },
     { name: "David Park", role: "Head of Engineering", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=David1", bio: "Passionate about building scalable systems and leading high-performing teams.", social: { linkedin: "#", twitter: "#", email: "david@quintessential.com" } },
     { name: "Jessica Williams", role: "VP of Product Design", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Jessica1", bio: "Creative designer focusing on user-centric experiences.", social: { linkedin: "#", twitter: "#", email: "jessica@quintessential.com" } },
-    { name: "Robert Chen", role: "Head of Data Science", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Robert1", bio: "Data scientist specializing in machine learning.", social: { linkedin: "#", twitter: "#", email: "robert@quintessential.com" } },
-    { name: "Emily Rodriguez", role: "Director of Cloud Solutions", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Emily1", bio: "Cloud expert helping businesses migrate and optimize infrastructure.", social: { linkedin: "#", twitter: "#", email: "emily@quintessential.com" } },
-    { name: "James Thompson", role: "VP of Cybersecurity", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=James1", bio: "Security specialist ensuring robust protection for client digital assets.", social: { linkedin: "#", twitter: "#", email: "james@quintessential.com" } },
-    { name: "Lisa Kumar", role: "Head of Client Success", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Lisa1", bio: "Dedicated to building lasting relationships and ensuring client satisfaction.", social: { linkedin: "#", twitter: "#", email: "lisa@quintessential.com" } },
+    
   ];
 
   return (

@@ -24,6 +24,8 @@ export interface ThreeDImageRingProps {
   inertiaPower?: number;
   inertiaTimeConstant?: number;
   inertiaVelocityMultiplier?: number;
+ 
+  
 }
 
 export default function ThreeDImageRing({
@@ -46,6 +48,7 @@ export default function ThreeDImageRing({
   inertiaPower = 0.8,
   inertiaTimeConstant = 300,
   inertiaVelocityMultiplier = 20,
+  
 }: ThreeDImageRingProps) {
   const router = useRouter();
   const containerRef = useRef<HTMLDivElement>(null);
@@ -159,9 +162,9 @@ export default function ThreeDImageRing({
       style={{
         backgroundColor,
         backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined,
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
         transform: `scale(${currentScale})`,
         transformOrigin: "center",
       }}
@@ -171,8 +174,8 @@ export default function ThreeDImageRing({
       <div
         style={{
           perspective: `${perspective}px`,
-          width: `${width}px`,
-          height: `${width * 1.33}px`,
+          width: `550px`,
+          height: `500px`,
           left: "50%",
           top: "50%",
           transform: "translate(-50%, -50%)",

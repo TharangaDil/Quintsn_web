@@ -14,61 +14,62 @@ interface BlogPost {
 }
 
 const blogPosts: BlogPost[] = [
-  {
-    title: "CRM vs Excel: Why UAE Companies Are Switching",
+   {
+    title: "The ROI of CRM Systems: Is It Worth the Investment?",
     description:
-      "CRM vs Excel is the big question for UAE businesses in 2025. In today’s fast-paced environment...",
+      "Why KSA/UAE companies see CRM as a way to make money, not just a cost If your business in the ...",
     image:
-      "https://images.unsplash.com/photo-1557821552-17105176677c?w=600&q=80",
+      "/img/zoho.png",
   },
   {
-    title: "The ROI of CRM Systems: Is It Worth The Investment?",
+    title: "CRM vs. Excel: Why UAE Companies Are Making the Switch",
     description:
-      "Why UAE companies see CRM as a way to make money, not just a cost...",
+      "CRM vs Excel is the big question for UAE businesses in 2025. In today’s fast-paced business environment, staying ahead means ...",
     image:
-      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80",
+       "/img/crm.png",
+  },
+ 
+  {
+    title: "ZOHO CRM for Small Businesses: Empowering UAE SMEs for Growth",
+    description:
+      "ZOHO CRM for small businesses is transforming how UAE startups and SMEs compete with industry giants. In today’s fast-paced market, ...",
+    image:
+      "/img/small.png",
   },
   {
-    title: "Zoho CRM for Small Businesses: UAE Case Study",
+    title: "Top 10 Features of ZOHO CRM That Will Transform Your Sales Process",
     description:
-      "Zoho CRM is empowering UAE startups and SMEs to compete with industry giants...",
+      "In today’s hyper-competitive business environment, sales teams can no longer rely on guesswork, manual tracking, or disconnected systems to manage...",
     image:
-      "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&q=80",
+       "/img/top.png",
   },
   {
-    title: "Zoho CRM for Small Businesses: UAE Case Study",
+    title: "What Is a CRM and Why Every UAE Business Needs One in 2025 | Quintessential Technologies",
     description:
-      "Zoho CRM is empowering UAE startups and SMEs to compete with industry giants...",
+      "Discover how a CRM system helps UAE businesses automate processes, boost sales, and stay competitive in 2025. What Is a ...",
     image:
-      "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&q=80",
+      "/img/uae.png",
   },
   {
-    title: "Zoho CRM for Small Businesses: UAE Case Study",
+    title: "What is SAP Business One used for?",
     description:
-      "Zoho CRM is empowering UAE startups and SMEs to compete with industry giants...",
+      "Small and medium businesses (SMBs) are the cornerstone of the global economy, contributing more than half of all jobs worldwide ...",
     image:
-      "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&q=80",
+      "/img/sap.png",
   },
   {
-    title: "Zoho CRM for Small Businesses: UAE Case Study",
+    title: "Empowering Decision-Making with SAP Business One Alert Management",
     description:
-      "Zoho CRM is empowering UAE startups and SMEs to compete with industry giants...",
+      "Empowering Decision-Making with SAP Business One Alert ManagementIn todayâ€™s fast-paced business environment, staying on top of critical activities and decisions ...",
     image:
-      "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&q=80",
+      "/img/decision.png",
   },
   {
-    title: "Zoho CRM for Small Businesses: UAE Case Study",
+    title: "How to Create Custom Fields in SAP Business One",
     description:
-      "Zoho CRM is empowering UAE startups and SMEs to compete with industry giants...",
+      "Adding custom fields in SAP Business One is an incredibly valuable way for businesses to capture critical, unique data specific ...",
     image:
-      "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&q=80",
-  },
-  {
-    title: "Zoho CRM for Small Businesses: UAE Case Study",
-    description:
-      "Zoho CRM is empowering UAE startups and SMEs to compete with industry giants...",
-    image:
-      "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&q=80",
+      "/img/custom.png",
   },
 ];
 

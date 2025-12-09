@@ -42,10 +42,10 @@ export default function HomePage() {
       <Technologies/>
       <Solutions />
       <Team />
-       <CaseStudies/>
+     
       <ClientLogos />
       <Testimonials />
-     <FAQ/>
+   
      
       <Footer />
       <ScrollToTop />
