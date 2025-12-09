@@ -48,7 +48,7 @@ export default function Solutions() {
   ];
 
   return (
-    <section id="solutions" className="relative py-20 overflow-hidden sm:py-28 bg-linear-to-b from-background via-accent/5 to-background">
+    <section id="solutions" className="relative py-16 overflow-hidden sm:py-16 bg-linear-to-b from-background via-accent/5 to-background">
       {/* Background decorations */}
       <div className="absolute rounded-full top-20 right-10 w-96 h-96 bg-primary/5 blur-3xl" />
       <div className="absolute rounded-full bottom-40 left-20 w-80 h-80 bg-accent/5 blur-3xl" />

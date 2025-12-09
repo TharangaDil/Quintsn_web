@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion,useScroll,useTransform } from "framer-motion";
+import { motion,useScroll,useTransform,useInView } from "framer-motion";
 
 interface TechnologyItem {
   name: string;
@@ -24,6 +24,7 @@ const technologies: TechnologyItem[] = [
 
 export default function Technologies() {
   const sectionRef = useRef<HTMLElement | null>(null);
+   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -40,7 +41,7 @@ export default function Technologies() {
     <section
       id="technologies"
       ref={sectionRef}
-      className="relative flex items-center min-h-screen px-6 py-24 overflow-hidden"
+      className="relative flex items-center min-h-screen px-6  overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0 bg-linear-to-b from-background via-muted/20 to-background" />
@@ -49,22 +50,22 @@ export default function Technologies() {
         <motion.div style={{ opacity, y }} className="space-y-16">
           {/* Header */}
           <div className="text-center">
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6 }}
-              className="text-sm font-semibold tracking-widest uppercase bg-linear-to-r from-[oklch(0.62_0.18_195)] to-[oklch(0.55_0.15_200)] bg-clip-text text-transparent"
-            >
-              Our Tech Stack
-            </motion.span>
+               <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-2 mb-4 text-sm font-medium rounded-full bg-primary/10 text-primary"
+          >
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            Our Tech Stack
+          </motion.div>
 
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="mt-4 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl"
+              className=" text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl"
             >
               Technologies We Master
             </motion.h2>
@@ -129,8 +130,8 @@ export default function Technologies() {
                       <motion.img
                         src={tech.logo}
                         alt={tech.name}
-                        className="relative z-10 object-contain w-16 h-16 transition-all duration-300 filter grayscale group-hover:grayscale-0"
-                        initial={{ filter: "grayscale(100%)" }}
+                        className="relative z-10 object-contain w-16 h-16 transition-all duration-300 filter  group-hover:grayscale-0"
+                        
                         whileHover={{ filter: "grayscale(0%)" }}
                       />
 

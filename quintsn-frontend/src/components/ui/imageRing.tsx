@@ -174,7 +174,7 @@ export default function ThreeDImageRing({
       <div
         style={{
           perspective: `${perspective}px`,
-          width: `500px`,
+          width: `450px`,
           height: `500px`,
           left: "50%",
           top: "50%",

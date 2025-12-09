@@ -165,7 +165,7 @@ export default function AboutDetails() {
               transition={{ duration: 0.3 }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80"
+                src="/img/aboutus.jpg"
                 alt="Team collaboration"
                 width={800}
                 height={500}

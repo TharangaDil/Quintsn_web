@@ -6,7 +6,7 @@ import Navigation from "@/components/navigation";
 import About from "@/components/about";
 import Services from "@/components/services";
 import Mission from "@/components/mission";
-import ClientLogos from "@/components/clientLogos";
+
 import Solutions from "@/components/solutions";
 import Team from "@/components/team";
 import Testimonials from "@/components/testimonials";
@@ -42,8 +42,6 @@ export default function HomePage() {
       <Technologies/>
       <Solutions />
       <Team />
-     
-      <ClientLogos />
       <Testimonials />
    
      

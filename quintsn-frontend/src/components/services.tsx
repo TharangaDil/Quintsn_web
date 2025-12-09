@@ -25,6 +25,7 @@ interface Tech {
   color: string;
 }
 
+
 export default function Services() {
   const ref = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -65,7 +66,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="relative py-20 overflow-hidden sm:py-28 bg-background">
+    <section id="services" className="relative  overflow-hidden sm:py-16 ">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-linear-to-b from-transparent via-primary/5 to-transparent" />
       <motion.div
@@ -108,7 +109,7 @@ export default function Services() {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid gap-6 mb-20 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6  md:grid-cols-2 lg:grid-cols-4">
           {services.map((service, index) => (
             <Link key={service.title} href={service.route}>
               <motion.div

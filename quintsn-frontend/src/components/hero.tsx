@@ -5,10 +5,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 const heroImages: string[] = [
-  "/img/tech.png",
-  "/img/tech2.png",
-  "/img/tech3.png",
-  "/img/tech4.png",
+  "/img/tech_company.jpg",
+  "/img/meeting.jpg",
+  "/img/lap.jpg",
+  "/img/cloud.jpg",
 ];
 
 type Particle = {
@@ -58,6 +58,7 @@ export default function Hero() {
   };
 
   return (
+    
     <section id="hero" className="relative w-full h-screen overflow-hidden">
       <head>
         <title>ERP & CRM Consulting Services - Quintessential Technologies</title>

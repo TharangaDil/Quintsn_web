@@ -47,8 +47,12 @@
   100% { background-position: 0% 50%; }
 }
 .bg-3d-section {
-  background-image: url('/img/background.png');
+  background-image: 
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url('/img/abouthero.jpg');
 }
+
+
 .bg-app-maintence{
   background-image: url('/img/appmanage.png');
 }

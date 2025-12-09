@@ -12,6 +12,9 @@ export default function ImageRing() {
     { url: "/img/ring5.jpg", label: "Microsoft Dynamic 365", href: "/" },
     { url: "/img/ring6.jpg", label: "SAGE ERP 300", href: "/blog" },
     { url: "/img/ring7.jpg", label: "Oracle Netsuit", href: "/servicesDetails" },
+    { url: "/img/ring7.jpg", label: "Oracle Netsuit", href: "/servicesDetails" },
+    { url: "/img/ring7.jpg", label: "Oracle Netsuit", href: "/servicesDetails" },
+    { url: "/img/ring7.jpg", label: "Oracle Netsuit", href: "/servicesDetails" },
     
   ];
 

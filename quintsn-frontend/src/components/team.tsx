@@ -1,6 +1,6 @@
 "use client";
 
-import { motion,useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Linkedin, Mail, Twitter } from "lucide-react";
 
@@ -27,15 +27,14 @@ export default function Team() {
     { name: "Sarah Mitchell", role: "CTO", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah1", bio: "Expert in cloud architecture and AI solutions.", social: { linkedin: "#", twitter: "#", email: "sarah@quintessential.com" } },
     { name: "David Park", role: "Head of Engineering", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=David1", bio: "Passionate about building scalable systems and leading high-performing teams.", social: { linkedin: "#", twitter: "#", email: "david@quintessential.com" } },
     { name: "Jessica Williams", role: "VP of Product Design", image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Jessica1", bio: "Creative designer focusing on user-centric experiences.", social: { linkedin: "#", twitter: "#", email: "jessica@quintessential.com" } },
-    
   ];
 
   return (
-    <section id="team" className="relative py-20 overflow-hidden sm:py-28 bg-background">
-      {/* Background */}
+    <section id="team" className="relative overflow-hidden sm:py-16 bg-background">
+      {/* Background Decorations */}
       <div className="absolute inset-0 bg-linear-to-b from-transparent via-accent/5 to-transparent" />
       <motion.div
-        className="absolute rounded-full top-40 right-20 w-96 h-96 bg-primary/5 blur-3xl"
+        className="absolute rounded-full top-40 right-20 w-72 h-72 sm:w-96 sm:h-96 bg-primary/5 blur-3xl"
         animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -74,7 +73,7 @@ export default function Team() {
               initial={{ opacity: 0, y: 40, scale: 0.9 }}
               animate={isInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 40, scale: 0.9 }}
               transition={{ duration: 0.6, delay: 0.1 + index * 0.05, ease: [0.22, 1, 0.36, 1] }}
-              whileHover={{ y: -12, scale: 1.02 }}
+              whileHover={{ y: -6, scale: 1.02 }}
               className="group"
             >
               <div className="relative overflow-hidden transition-all duration-300 border rounded-2xl bg-card border-border/50 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10">
@@ -84,23 +83,23 @@ export default function Team() {
                     src={member.image}
                     alt={member.name}
                     className="object-cover w-full h-full"
-                    whileHover={{ scale: 1.1 }}
+                    whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.4 }}
                   />
                   {/* Social overlay */}
                   <motion.div
                     initial={{ opacity: 0 }}
                     whileHover={{ opacity: 1 }}
-                    className="absolute inset-0 flex items-end justify-center pb-6 transition-opacity opacity-0 bg-linear-to-t from-primary/90 via-primary/60 to-transparent group-hover:opacity-100"
+                    className="absolute inset-0 flex items-end justify-center pb-4 sm:pb-6 transition-opacity opacity-0 bg-linear-to-t from-primary/90 via-primary/60 to-transparent group-hover:opacity-100"
                   >
                     <div className="flex gap-3">
-                      <motion.a href={member.social.linkedin} whileHover={{ scale: 1.15, y: -3 }} whileTap={{ scale: 0.95 }} className="flex items-center justify-center w-10 h-10 transition-colors rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30">
+                      <motion.a href={member.social.linkedin} whileHover={{ scale: 1.15, y: -2 }} whileTap={{ scale: 0.95 }} className="flex items-center justify-center w-10 h-10 transition-colors rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30">
                         <Linkedin className="w-5 h-5 text-white" />
                       </motion.a>
-                      <motion.a href={member.social.twitter} whileHover={{ scale: 1.15, y: -3 }} whileTap={{ scale: 0.95 }} className="flex items-center justify-center w-10 h-10 transition-colors rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30">
+                      <motion.a href={member.social.twitter} whileHover={{ scale: 1.15, y: -2 }} whileTap={{ scale: 0.95 }} className="flex items-center justify-center w-10 h-10 transition-colors rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30">
                         <Twitter className="w-5 h-5 text-white" />
                       </motion.a>
-                      <motion.a href={`mailto:${member.social.email}`} whileHover={{ scale: 1.15, y: -3 }} whileTap={{ scale: 0.95 }} className="flex items-center justify-center w-10 h-10 transition-colors rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30">
+                      <motion.a href={`mailto:${member.social.email}`} whileHover={{ scale: 1.15, y: -2 }} whileTap={{ scale: 0.95 }} className="flex items-center justify-center w-10 h-10 transition-colors rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30">
                         <Mail className="w-5 h-5 text-white" />
                       </motion.a>
                     </div>
@@ -108,21 +107,18 @@ export default function Team() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
+                <div className="p-4 sm:p-6">
                   <h3 className="mb-1 text-lg font-semibold transition-colors text-foreground group-hover:text-primary">{member.name}</h3>
-                  <p className="mb-3 text-sm font-medium text-primary">{member.role}</p>
+                  <p className="mb-2 text-sm font-medium text-primary">{member.role}</p>
                   <p className="text-sm leading-relaxed text-muted-foreground">{member.bio}</p>
                 </div>
 
                 {/* Decorative corner */}
-                <div className="absolute w-8 h-8 transition-opacity border-t-2 border-r-2 rounded-tr-lg opacity-0 top-4 right-4 border-primary/20 group-hover:opacity-100" />
+                <div className="absolute w-6 h-6 sm:w-8 sm:h-8 transition-opacity border-t-2 border-r-2 rounded-tr-lg opacity-0 top-3 right-3 sm:top-4 sm:right-4 border-primary/20 group-hover:opacity-100" />
               </div>
             </motion.div>
           ))}
         </div>
-
-        {/* Join CTA */}
-       
       </div>
     </section>
   );

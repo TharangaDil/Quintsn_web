@@ -63,7 +63,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="relative py-20 overflow-hidden sm:py-28 bg-linear-to-b from-background via-primary/5 to-background">
+    <section className="relative py-16 overflow-hidden sm:py-16 bg-linear-to-b from-background via-primary/5 to-background">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div

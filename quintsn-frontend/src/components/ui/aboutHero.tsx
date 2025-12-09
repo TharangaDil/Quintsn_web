@@ -105,38 +105,7 @@ export default function AboutHero() {
           your growth potential as a Trading & Service company.
         </motion.p>
 
-        
 
-        {/* Stats 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="grid grid-cols-2 gap-6 mt-16 md:grid-cols-4 sm:gap-8 sm:mt-20"
-        >
-          {[
-            { label: "Years Experience", value: "10+" },
-            { label: "Projects Delivered", value: "500+" },
-            { label: "Happy Clients", value: "200+" },
-            { label: "Team Members", value: "50+" },
-          ].map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
-              className="p-4 transition-colors border sm:p-6 rounded-xl bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50"
-            >
-              <div className="mb-1 text-2xl font-bold sm:text-3xl md:text-4xl text-primary">
-                {stat.value}
-              </div>
-              <div className="text-xs sm:text-sm text-muted-foreground">
-                {stat.label}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-        */}
       </motion.div>
     </section>
   );
