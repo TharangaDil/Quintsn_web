@@ -85,7 +85,7 @@ export default function AppMaintenance() {
             </motion.h2>
 
             <motion.div
-              className="space-y-4 text-lg leading-relaxed text-muted-foreground ml-[60px]"
+              className="space-y-4 text-lg leading-relaxed text-muted-foreground ml-[60px] text-justify"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -119,7 +119,7 @@ export default function AppMaintenance() {
               transition={{ duration: 0.3 }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80"
+                src="/img/appmaintain.jpg"
                 alt="Team collaboration"
                 width={200}
                 height={150}
@@ -157,7 +157,7 @@ export default function AppMaintenance() {
               transition={{ duration: 0.3 }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80"
+                src="/img/optimizationimg.jpg"
                 alt="Team collaboration"
                 width={200}
                 height={150}
@@ -283,7 +283,7 @@ export default function AppMaintenance() {
               transition={{ duration: 0.3 }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80"
+                src="/img/support.jpg"
                 alt="Team collaboration"
                 width={200}
                 height={150}
@@ -321,7 +321,7 @@ export default function AppMaintenance() {
               transition={{ duration: 0.3 }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80"
+                src="/img/training.jpg"
                 alt="Team collaboration"
                 width={200}
                 height={150}

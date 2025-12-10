@@ -100,7 +100,7 @@ export default function AboutDetails() {
             </motion.h2>
 
             <motion.div
-              className="space-y-4 text-lg leading-relaxed text-muted-foreground"
+              className="space-y-4 text-lg leading-relaxed text-muted-foreground text-justify"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
