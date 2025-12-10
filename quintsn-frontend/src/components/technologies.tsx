@@ -44,7 +44,7 @@ export default function Technologies() {
       className="relative flex items-center min-h-screen px-6  overflow-hidden"
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-linear-to-b from-background via-muted/20 to-background" />
+      <div className="absolute inset-0 bg-linear-to-b from-background via-muted/20 to-background py-5" />
 
       <div className="container relative z-10 mx-auto">
         <motion.div style={{ opacity, y }} className="space-y-16">

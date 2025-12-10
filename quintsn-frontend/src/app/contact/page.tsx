@@ -161,7 +161,7 @@ export default function Contact() {
               <div>
                 <h3 className="mb-6 text-2xl font-semibold">Contact Information</h3>
 
-                <div className="space-y-4">
+                <div className="space-y-4 ">
                   {contactInfo.map((info, index) => (
                     <motion.a
                       key={info.title}
@@ -233,7 +233,7 @@ export default function Contact() {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full mt-10"
+                  className="w-full mt-6"
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
                   <Send className="ml-2" />

@@ -66,7 +66,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="relative  overflow-hidden sm:py-16 ">
+    <section id="services" className="relative  overflow-hidden sm:py-5 ">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-linear-to-b from-transparent via-primary/5 to-transparent" />
       <motion.div

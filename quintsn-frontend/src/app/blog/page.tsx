@@ -31,7 +31,7 @@ const caseStudies: CaseStudy[] = [
     description:
       "HIPAA-compliant platform streamlining patient care across 50+ clinics with real-time data sync.",
     image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80",
+      "/img/AI.jpg",
     tags: ["Node.js", "PostgreSQL", "Security"],
   },
   {
