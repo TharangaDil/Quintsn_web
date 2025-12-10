@@ -66,7 +66,7 @@ export default function Navigation() {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-1 text-left">
             {navItems.map((item) =>
               item.submenu ? (
                 <div
@@ -122,7 +122,7 @@ export default function Navigation() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 rounded-lg transition-colors hover:bg-accent"
+            className="md:hidden p-2 rounded-lg transition-colors hover:bg-accent " 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -141,7 +141,7 @@ export default function Navigation() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden border-t bg-card border-border"
+            className="md:hidden border-t bg-card border-border text-left"
           >
             <div className="px-4 py-4 space-y-2">
               {navItems.map((item) =>
