@@ -36,7 +36,7 @@ export default function Footer() {
       { name: "Privacy Policy", href: "/privacy" },
     ],
     Applications: [
-      { name: "SAP Business One", href: "#services" },
+      { name: "SAP Business One", href: "/businessOne" },
       { name: "SAP by Design", href: "#services" },
       { name: "Microsoft Dynamic 365", href: "#services" },
       { name: "SAGE ERP 300", href: "#services" },

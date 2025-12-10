@@ -68,6 +68,9 @@
 .bg-contact{
   background-image: url('/img/contact.jpg');
 }
+.bg-business-one{
+  background-image: url('/img/bone.jpg');
+}
 /* Sidebar CSS */
 .social-sidebar {
   position: fixed;
@@ -119,4 +122,7 @@
 .social-sidebar a:hover span {
   opacity: 1;
   transform: translateX(0);
+}
+.social-sidebar  .whatsapp:hover {
+  background: #1ebe5d;
 }
