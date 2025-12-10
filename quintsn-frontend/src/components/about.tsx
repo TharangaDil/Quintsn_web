@@ -86,10 +86,8 @@ export default function About() {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                Unleash Growth. Your Trusted Partner in Business Technology Transformation.{" "}
-                <span className="bg-linear-to-r from-[oklch(0.62_0.18_195)] to-[oklch(0.55_0.15_200)] bg-clip-text text-transparent">
-                  Technology
-                </span>
+                Applications are only one piece of the puzzle{" "}
+                
               </motion.h2>
 
               <motion.div
@@ -100,13 +98,13 @@ export default function About() {
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 <p>
-                  Quintessential goes beyond software. We’re a team of certified consultants, passionate about empowering 
-                  businesses across MENA, North America, and MEA. We act as an extension of your team, bringing deep industry 
-                  knowledge and extensive expertise in business technology solutions to the table.
+                  At Quintessential, we go beyond being an ERP provider. Headquartered in Dubai, UAE, we’re a team of passionate 
+                  business technology consultants, fueled by deep industry knowledge and a mastery of diverse technology solutions. We view technology as a strategic tool, the key to unlocking your full potential and achieving operational excellence.
                 </p>
                 <p>
-                 We believe technology is a strategic tool, not just software. It’s the key to unlocking your full potential 
-                 and achieving operational excellence.
+                 Our team of highly skilled professionals brings a results-driven approach to every project. We offer 
+                 comprehensive business technology services, ranging from strategic IT planning to implementation, maintenance, 
+                 and ongoing support.
                 </p>
               </motion.div>
 

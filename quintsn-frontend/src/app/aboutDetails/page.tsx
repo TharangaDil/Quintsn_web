@@ -59,7 +59,7 @@ export default function AboutDetails() {
             Who We Are
           </h2>
 
-          <p className="max-w-3xl mx-auto text-lg text-muted-foreground">
+          <p className="max-w-3xl mx-auto text-lg text-muted-foreground ">
             Quintessential Technologies is a leading technology solutions
             provider, dedicated to transforming businesses through innovative
             software development, cloud solutions, and digital transformation
@@ -95,10 +95,8 @@ export default function AboutDetails() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-             Unleash Growth. Your Trusted Partner in Business Technology Transformation.{" "}
-              <span className="bg-linear-to-r from-[oklch(0.62_0.18_195)] to-[oklch(0.55_0.15_200)] bg-clip-text text-transparent">
-                Technology
-              </span>
+             Applications are only one piece of the puzzle{" "}
+              
             </motion.h2>
 
             <motion.div
@@ -109,46 +107,48 @@ export default function AboutDetails() {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <p>
-                Quintessential goes beyond software. We’re a team of certified consultants, passionate about empowering businesses across MENA, North America, and MEA. We act as an extension of your team, bringing deep industry knowledge and extensive expertise in business technology solutions to the table.
-
-
-              </p>
-              <p>
-                We believe technology is a strategic tool, not just software. It’s the key to unlocking your full
-                potential and achieving operational excellence.
-              </p>
+                  At Quintessential, we go beyond being an ERP provider. Headquartered in Dubai, UAE, we’re a team of passionate 
+                  business technology consultants, fueled by deep industry knowledge and a mastery of diverse technology solutions. We view technology as a strategic tool, the key to unlocking your full potential and achieving operational excellence.
+                </p>
+                <p>
+                 Our team of highly skilled professionals brings a results-driven approach to every project. We offer 
+                 comprehensive business technology services, ranging from strategic IT planning to implementation, maintenance, 
+                 and ongoing support.
+                </p>
               
             </motion.div>
 
-            {/* Stats */}
-            <motion.div
-              className="flex gap-8 pt-4"
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-            >
-              <div>
-                <div className="text-4xl font-bold bg-linear-to-r from-[oklch(0.62_0.18_195)] to-[oklch(0.55_0.15_200)] bg-clip-text text-transparent">
-                  10+
-                </div>
-                <div className="mt-1 text-sm text-muted-foreground">Business Consultancy</div>
-              </div>
+            
+              {/* Stats with Hover Zoom Animation */}
+<motion.div
+  className="flex flex-wrap gap-6 sm:gap-8 pt-4"
+  initial={{ opacity: 0, x: -30 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true, margin: "-100px" }}
+  transition={{ duration: 0.8, delay: 0.5 }}
+>
+  {[
+    { title: "Business Consultancy", href: "/businessConsultant" },
+    { title: "Application Implementation & Support", href: "/appMaintenance" },
+    { title: "Application Development", href: "/appDevelopment" },
+  ].map((item, index) => (
+    <motion.a
+      key={index}
+      href={item.href}
+      whileHover={{ scale: 1.08 }}
+      whileTap={{ scale: 0.95 }}
+      transition={{ type: "spring", stiffness: 300 }}
+      className="relative inline-block text-sm sm:text-base text-muted-foreground font-medium cursor-pointer
+                 hover:text-primary transition-colors duration-300"
+    >
+      {item.title}
 
-              <div>
-                <div className="text-4xl font-bold bg-linear-to-r from-[oklch(0.62_0.18_195)] to-[oklch(0.55_0.15_200)] bg-clip-text text-transparent">
-                  200+
-                </div>
-                <div className="mt-1 text-sm text-muted-foreground">Application Implementation & Support</div>
-              </div>
+      {/* Hover Glow Effect */}
+      <span className="absolute -inset-1 rounded-lg bg-primary/10 blur opacity-0 hover:opacity-100 transition-opacity duration-300 -z-10" />
+    </motion.a>
+  ))}
+</motion.div>
 
-              <div>
-                <div className="text-4xl font-bold bg-linear-to-r from-[oklch(0.62_0.18_195)] to-[oklch(0.55_0.15_200)] bg-clip-text text-transparent">
-                  50+
-                </div>
-                <div className="mt-1 text-sm text-muted-foreground">Application Development</div>
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* Image Section */}

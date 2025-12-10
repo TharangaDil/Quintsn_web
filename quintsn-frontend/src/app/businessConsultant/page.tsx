@@ -79,17 +79,17 @@ export default function BussinessConsultant() {
                   transition={{ duration: 0.8, delay: 0.4 }}
                 >
                   <p>
-                    Our team of consultants are highly experienced and certified
-                    in various ERP systems, including SAP, Oracle, Microsoft
-                    Dynamics and SAGE.
+                    Our team of consultants are highly experienced and certified in various ERP systems, including SAP, Oracle, 
+                    Microsoft Dynamics and SAGE. We keep up-to-date with the latest trends and technologies in the industry, and 
+                    we use this knowledge to help our clients stay ahead of the curve.
                   </p>
                   <p>
-                    We believe in providing exceptional customer service and
-                    maintaining long-term relationships with our clients.
+                    We believe in providing exceptional customer service and maintaining long-term relationships with our clients.
+                     Our goal is to help you succeed by maximizing the potential of your Applications/ERP system.
                   </p>
                   <p>
-                    Contact us today to learn more about our services and how we
-                    can help your business achieve its goals.
+                    Contact us today to learn more about our services and how we can help your business achieve its goals with a 
+                    powerful and efficient application/ERP system.
                   </p>
                 </motion.div>
               </motion.div>
@@ -108,7 +108,7 @@ export default function BussinessConsultant() {
                   transition={{ duration: 0.3 }}
                 >
                   <Image
-                    src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80"
+                    src="/img/services.jpg"
                     alt="Team collaboration"
                     width={800}
                     height={600}

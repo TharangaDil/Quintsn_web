@@ -90,7 +90,7 @@ export default function AboutHero() {
           className="mb-6 text-4xl font-bold leading-tight sm:text-5xl md:text-6xl lg:text-7xl text-balance"
         >
           {" "}
-          <span className="text-transparent bg-gradient-to-r from-primary via-primary/80 to-accent bg-clip-text">
+          <span className="text-transparent text-white bg-clip-text">
             Expert Consulting for Optimised Operations
           </span>
         </motion.h1>
@@ -99,7 +99,7 @@ export default function AboutHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="max-w-3xl mx-auto mb-10 text-lg sm:text-xl text-muted-foreground text-balance"
+          className="max-w-3xl mx-auto mb-10 text-lg sm:text-xl text-muted-foreground text-balance text-white"
         >
           Quintessential Technology goes beyond software. We’re expert business technology consultants, here to unlock 
           your growth potential as a Trading & Service company.
