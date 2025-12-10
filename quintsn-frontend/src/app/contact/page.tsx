@@ -21,7 +21,6 @@ import Navigation from "@/components/navigation";
 import ContactHero from "@/components/ui/contactHero";
 import Footer from "@/components/footer";
 
-// ================= TYPES =================
 interface FormData {
   name: string;
   email: string;
@@ -43,7 +42,6 @@ interface SocialLink {
   color: string;
 }
 
-// ================= COMPONENT =================
 export default function Contact() {
   const ref = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -56,7 +54,6 @@ export default function Contact() {
     message: "",
   });
 
-  // ================= HANDLERS =================
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -78,7 +75,6 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // ================= DATA =================
   const contactInfo: ContactInfo[] = [
     {
       icon: Mail,
@@ -104,36 +100,34 @@ export default function Contact() {
       content: "No:401, Mohammad Saleh al GURG, Dubai, UAE",
       link: "#",
     },
-    
   ];
 
   const socialLinks: SocialLink[] = [
-      {
-        icon: MessageCircle,
-        name: "WhatsApp",
-        link: "https://wa.me/971561289803",
-        color: "hover:text-green-600",
-      },
-      {
-        icon: Facebook,
-        name: "Facebook",
-        link: "https://facebook.com/QuintessentialTechnologies",
-        color: "hover:text-blue-600",
-      },
-      {
-        icon: Instagram,
-        name: "Instagram",
-        link: "https://instagram.com/quintessentialtechnology",
-        color: "hover:text-pink-600",
-      },
-      {
-        icon: Linkedin,
-        name: "LinkedIn",
-        link: "https://linkedin.com/company/quintessential-technologie",
-        color: "hover:text-blue-700",
-      },
-    ];
-
+    {
+      icon: MessageCircle,
+      name: "WhatsApp",
+      link: "https://wa.me/971561289803",
+      color: "hover:text-green-600",
+    },
+    {
+      icon: Facebook,
+      name: "Facebook",
+      link: "https://facebook.com/QuintessentialTechnologies",
+      color: "hover:text-blue-600",
+    },
+    {
+      icon: Instagram,
+      name: "Instagram",
+      link: "https://instagram.com/quintessentialtechnology",
+      color: "hover:text-pink-600",
+    },
+    {
+      icon: Linkedin,
+      name: "LinkedIn",
+      link: "https://linkedin.com/company/quintessential-technologie",
+      color: "hover:text-blue-700",
+    },
+  ];
 
   return (
     <>
@@ -144,22 +138,20 @@ export default function Contact() {
         <head>
           <title>Contact Quintessential Technologies UAE | CRM & ERP Help</title>
         </head>
+
         <Navigation />
         <ContactHero />
 
-        {/* Background blobs */}
         <div className="absolute rounded-full top-20 left-10 w-96 h-96 bg-primary/5 blur-3xl" />
         <div className="absolute rounded-full bottom-20 right-10 w-96 h-96 bg-accent/5 blur-3xl" />
-        
 
-        {/* ✅ FIXED REF IS HERE */}
         <div
           ref={ref}
-          className="relative z-10 px-4 mx-auto mt-20 max-w-7xl sm:px-6 lg:px-8"
+          className="relative z-10 px-4 mx-auto mt-16 max-w-7xl sm:px-6 lg:px-8"
         >
           <div className="grid items-start gap-12 lg:grid-cols-2">
 
-            {/* ================= LEFT SIDE ================= */}
+            {/* LEFT */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -177,12 +169,14 @@ export default function Contact() {
                       initial={{ opacity: 0, x: -20 }}
                       animate={isInView ? { opacity: 1, x: 0 } : {}}
                       transition={{ delay: index * 0.1 }}
-                      className="flex gap-4 p-4 border rounded-xl bg-card w-[500px]"
+                      className="flex w-full max-w-full gap-4 p-4 border rounded-xl bg-card sm:max-w-[500px]"
                     >
-                      <info.icon className="text-primary" />
+                      <info.icon className="text-primary shrink-0" />
                       <div>
                         <h4 className="font-medium">{info.title}</h4>
-                        <p className="text-sm text-muted-foreground">{info.content}</p>
+                        <p className="text-sm text-muted-foreground break-words">
+                          {info.content}
+                        </p>
                       </div>
                     </motion.a>
                   ))}
@@ -192,7 +186,7 @@ export default function Contact() {
               {/* SOCIAL */}
               <div>
                 <h3 className="mb-3 text-xl font-semibold">Follow Us</h3>
-                <div className="flex gap-3">
+                <div className="flex flex-wrap gap-3">
                   {socialLinks.map((social) => (
                     <a
                       key={social.name}
@@ -205,25 +199,19 @@ export default function Contact() {
                   ))}
                 </div>
               </div>
-
-              {/* MAP */}
-              
             </motion.div>
 
-            {/* ================= RIGHT SIDE FORM ================= */}
+            {/* RIGHT FORM */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
             >
-                <h3 className="mb-6 text-2xl font-semibold">
-                  Send Us a Message
-                </h3>
+              <h3 className="mb-6 text-2xl font-semibold">Send Us a Message</h3>
+
               <form
                 onSubmit={handleSubmit}
-                className="p-8 border rounded-2xl bg-card h-96 w-[450px]"
+                className="p-6 sm:p-8 border rounded-2xl bg-card w-full max-w-full sm:max-w-[450px]"
               >
-              
- 
                 {Object.entries(formData).map(([key, val]) => {
                   const isMessage = key === "message";
                   const Component = isMessage ? Textarea : Input;
@@ -252,22 +240,21 @@ export default function Contact() {
                 </Button>
               </form>
             </motion.div>
-            
-
           </div>
-          <div className="flex items-center justify-center h-64 border rounded-xl mt-20 overflow-hidden">
-    <iframe
-    title="Office Location - Dubai"
-    src="https://maps.google.com/maps?q=No:%20401,%20Mohammad%20Saleh%20Al%20Gurg,%20Dubai,%20UAE&t=&z=15&ie=UTF8&iwloc=&output=embed"
-    width="100%"
-    height="100%"
-    style={{ border: 0 }}
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-    className="rounded-xl"
-  />
-</div>
 
+          {/* MAP */}
+          <div className="flex items-center justify-center h-[300px] sm:h-[350px] border rounded-xl mt-14 overflow-hidden">
+            <iframe
+              title="Office Location - Dubai"
+              src="https://maps.google.com/maps?q=No:%20401,%20Mohammad%20Saleh%20Al%20Gurg,%20Dubai,%20UAE&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="rounded-xl"
+            />
+          </div>
         </div>
       </section>
 
