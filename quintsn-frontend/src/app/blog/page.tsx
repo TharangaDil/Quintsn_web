@@ -3,132 +3,199 @@
 import Footer from "@/components/footer";
 import Navigation from "@/components/navigation";
 import BlogHero from "@/components/ui/blogHero";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-
-interface BlogPost {
+import { ExternalLink } from "lucide-react";
+import { useState,useRef } from "react";
+interface CaseStudy {
   title: string;
+  category: string;
   description: string;
   image: string;
-  link?: string;
+  tags: string[];
 }
 
-const blogPosts: BlogPost[] = [
-   {
-    title: "The ROI of CRM Systems: Is It Worth the Investment?",
+const caseStudies: CaseStudy[] = [
+  {
+    title: "Zoho",
+    category: "E-Commerce",
     description:
-      "Why KSA/UAE companies see CRM as a way to make money, not just a cost If your business in the ...",
+      "Built a scalable marketplace handling 10M+ transactions monthly with AI-powered recommendations.",
     image:
-      "/img/zoho.png",
+      "https://images.unsplash.com/photo-1557821552-17105176677c?w=600&q=80",
+    tags: ["React", "AWS", "AI/ML"],
   },
   {
-    title: "CRM vs. Excel: Why UAE Companies Are Making the Switch",
+    title: "Artificial Intelligent (AI)",
+    category: "Healthcare",
     description:
-      "CRM vs Excel is the big question for UAE businesses in 2025. In today’s fast-paced business environment, staying ahead means ...",
+      "HIPAA-compliant platform streamlining patient care across 50+ clinics with real-time data sync.",
     image:
-       "/img/crm.png",
-  },
- 
-  {
-    title: "ZOHO CRM for Small Businesses: Empowering UAE SMEs for Growth",
-    description:
-      "ZOHO CRM for small businesses is transforming how UAE startups and SMEs compete with industry giants. In today’s fast-paced market, ...",
-    image:
-      "/img/small.png",
+      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80",
+    tags: ["Node.js", "PostgreSQL", "Security"],
   },
   {
-    title: "Top 10 Features of ZOHO CRM That Will Transform Your Sales Process",
+    title: "Microsoft",
+    category: "Finance",
     description:
-      "In today’s hyper-competitive business environment, sales teams can no longer rely on guesswork, manual tracking, or disconnected systems to manage...",
+      "Award-winning mobile banking app with biometric authentication and instant payments.",
     image:
-       "/img/top.png",
+      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80",
+    tags: ["React Native", "Blockchain", "Security"],
   },
   {
-    title: "What Is a CRM and Why Every UAE Business Needs One in 2025 | Quintessential Technologies",
+    title: "SAP",
+    category: "Analytics",
     description:
-      "Discover how a CRM system helps UAE businesses automate processes, boost sales, and stay competitive in 2025. What Is a ...",
+      "Real-time business intelligence platform processing 1TB+ data daily with predictive insights.",
     image:
-      "/img/uae.png",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
+    tags: ["Python", "TensorFlow", "Data Science"],
   },
-  {
-    title: "What is SAP Business One used for?",
-    description:
-      "Small and medium businesses (SMBs) are the cornerstone of the global economy, contributing more than half of all jobs worldwide ...",
-    image:
-      "/img/sap.png",
-  },
-  {
-    title: "Empowering Decision-Making with SAP Business One Alert Management",
-    description:
-      "Empowering Decision-Making with SAP Business One Alert ManagementIn todayâ€™s fast-paced business environment, staying on top of critical activities and decisions ...",
-    image:
-      "/img/decision.png",
-  },
-  {
-    title: "How to Create Custom Fields in SAP Business One",
-    description:
-      "Adding custom fields in SAP Business One is an incredibly valuable way for businesses to capture critical, unique data specific ...",
-    image:
-      "/img/custom.png",
-  },
+  
 ];
 
 export default function BlogPage() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
+  const y = useTransform(scrollYProgress, [0, 0.3], [50, 0]);
+
   return (
     <>
-    <section className="px-6 py-20 bg-gray-50 min-h-screen">
-        <Navigation/>
+    <section
+      id="case-studies"
+      ref={sectionRef}
+      className="relative min-h-screen px-6 py-24 overflow-hidden"
+    >
+       <Navigation/>
         <BlogHero/>
-        
-        <head>
-          <title>Business Technology Blog UAE | Quintessential Technologies</title>
-        </head>
-      <div className="container mx-auto max-w-7xl mt-20">
-        
-       
-        {/* Blog Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          {blogPosts.map((post, index) => (
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-linear-to-b from-background via-muted/20 to-background" />
+     
+      <div className="container relative z-10 mx-auto mt-20">
+        
+
+        {/* Masonry Grid */}
+        <div className="grid gap-6 mx-auto md:grid-cols-2 lg:grid-cols-2 max-w-7xl">
+          {caseStudies.map((study, index) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40 }}
+              key={study.title}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.4 }}
-              className="bg-white rounded-xl shadow-lg overflow-hidden border hover:shadow-2xl cursor-pointer"
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ scale: 1.03, y: -8 }}
+              onHoverStart={() => setHoveredIndex(index)}
+              onHoverEnd={() => setHoveredIndex(null)}
+              className="cursor-pointer group"
             >
-              {/* Image */}
-              <div className="relative h-60 w-full">
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              {/* Content */}
-              <div className="p-5 space-y-3">
-                <h3 className="text-xl font-semibold text-gray-900">
-                  {post.title}
-                </h3>
-
-                <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
-                  {post.description}
-                </p>
-
-                <a
-                  href={post.link || "#"}
-                  className="inline-block mt-3 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition"
+              <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+                {/* Background image */}
+                <motion.div
+                  className="absolute inset-0"
+                  animate={{ scale: hoveredIndex === index ? 1.1 : 1 }}
+                  transition={{ duration: 0.4 }}
                 >
-                  Read More
-                </a>
+                  <Image
+                    src={study.image}
+                    alt={study.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+
+                  <div className="absolute inset-0 bg-linear-to-t from-[oklch(0.12_0.02_240)] via-[oklch(0.12_0.02_240)]/80 to-transparent" />
+                </motion.div>
+
+                {/* Overlay Content */}
+                <div className="absolute inset-0 flex flex-col justify-end p-6">
+                  {/* Category badge */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{
+                      opacity: hoveredIndex === index ? 1 : 0.8,
+                      y: hoveredIndex === index ? 0 : 10,
+                    }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <span className="inline-block px-3 py-1 text-xs font-semibold border rounded-full bg-primary/20 backdrop-blur-sm border-primary/30 text-primary">
+                      {study.category}
+                    </span>
+                  </motion.div>
+
+                  {/* Title + Description */}
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{
+                      y: hoveredIndex === index ? 0 : 20,
+                      opacity: hoveredIndex === index ? 1 : 0.9,
+                    }}
+                    transition={{ duration: 0.3, delay: 0.1 }}
+                    className="space-y-2"
+                  >
+                    <h3 className="flex items-center gap-2 text-2xl font-bold text-white">
+                      {study.title}
+
+                      <motion.div
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{
+                          opacity: hoveredIndex === index ? 1 : 0,
+                          x: hoveredIndex === index ? 0 : -10,
+                        }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <ExternalLink className="w-5 h-5" />
+                      </motion.div>
+                    </h3>
+
+                    <p className="text-sm text-white/80">{study.description}</p>
+                  </motion.div>
+
+                  {/* Tags */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{
+                      opacity: hoveredIndex === index ? 1 : 0,
+                      y: hoveredIndex === index ? 0 : 10,
+                    }}
+                    transition={{ duration: 0.3, delay: 0.2 }}
+                    className="flex flex-wrap gap-2 mt-4"
+                  >
+                    {study.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2 py-1 text-xs rounded bg-white/10 backdrop-blur-sm text-white/70"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </motion.div>
+                </div>
+
+                {/* Hover Border Glow */}
+                <motion.div
+                  className="absolute inset-0 transition-opacity duration-500 opacity-0 pointer-events-none rounded-2xl group-hover:opacity-100"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, oklch(0.62 0.18 195 / 0.3), oklch(0.55 0.15 200 / 0.3))",
+                    padding: "2px",
+                    WebkitMask:
+                      "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                    WebkitMaskComposite: "xor",
+                    maskComposite: "exclude",
+                  }}
+                />
               </div>
             </motion.div>
           ))}
-
         </div>
       </div>
     </section>

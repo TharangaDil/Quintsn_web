@@ -93,11 +93,18 @@ export default function Contact() {
       link: "tel:+971561289803",
     },
     {
+      icon: MessageCircle,
+      title: "Whatsapp",
+      content: "+971 561 289 803",
+      link: "https://wa.me/971561289803",
+    },
+    {
       icon: MapPin,
       title: "Visit Us",
       content: "No:401, Mohammad Saleh al GURG, Dubai, UAE",
       link: "#",
     },
+    
   ];
 
   const socialLinks: SocialLink[] = [
@@ -143,6 +150,7 @@ export default function Contact() {
         {/* Background blobs */}
         <div className="absolute rounded-full top-20 left-10 w-96 h-96 bg-primary/5 blur-3xl" />
         <div className="absolute rounded-full bottom-20 right-10 w-96 h-96 bg-accent/5 blur-3xl" />
+        
 
         {/* ✅ FIXED REF IS HERE */}
         <div
@@ -169,7 +177,7 @@ export default function Contact() {
                       initial={{ opacity: 0, x: -20 }}
                       animate={isInView ? { opacity: 1, x: 0 } : {}}
                       transition={{ delay: index * 0.1 }}
-                      className="flex gap-4 p-4 border rounded-xl bg-card"
+                      className="flex gap-4 p-4 border rounded-xl bg-card w-[500px]"
                     >
                       <info.icon className="text-primary" />
                       <div>
@@ -207,14 +215,15 @@ export default function Contact() {
               initial={{ opacity: 0, x: 50 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
             >
-              <form
-                onSubmit={handleSubmit}
-                className="p-8 border rounded-2xl bg-card"
-              >
                 <h3 className="mb-6 text-2xl font-semibold">
                   Send Us a Message
                 </h3>
-
+              <form
+                onSubmit={handleSubmit}
+                className="p-8 border rounded-2xl bg-card h-96 w-[450px]"
+              >
+              
+ 
                 {Object.entries(formData).map(([key, val]) => {
                   const isMessage = key === "message";
                   const Component = isMessage ? Textarea : Input;
@@ -236,7 +245,7 @@ export default function Contact() {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full"
+                  className="w-full mt-10"
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
                   <Send className="ml-2" />

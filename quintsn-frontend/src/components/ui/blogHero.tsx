@@ -90,7 +90,7 @@ export default function BlogHero() {
           className="mb-6 text-4xl font-bold leading-tight sm:text-5xl md:text-6xl lg:text-7xl text-balance"
         >
           {" "}
-          <span className="text-transparent bg-gradient-to-r from-primary via-primary/80 to-accent bg-clip-text">
+          <span className="text-transparent bg-gradient-to-r from-primary via-primary/80 to-accent bg-clip-text text-white">
             The Blog
           </span>
         </motion.h1>
