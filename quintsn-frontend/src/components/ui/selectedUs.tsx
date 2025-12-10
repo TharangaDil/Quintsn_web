@@ -145,7 +145,7 @@ export default function SelectedUs() {
           </div>
         ))}
 
-        {/* ✅ CONTACT SECTION */}
+        {/* ✅ CONTACT SECTION 
         <div className="container mx-auto mt-24 text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
             Contact Us
@@ -158,7 +158,7 @@ export default function SelectedUs() {
           <div className="flex justify-center mt-10">
             <ShineButton label="CONTACT US" />
           </div>
-        </div>
+        </div>*/}
 
         {/* ✅ PRODUCTS */}
         <div className="container mx-auto mt-32">
