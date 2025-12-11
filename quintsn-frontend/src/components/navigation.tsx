@@ -33,6 +33,7 @@ export default function Navigation() {
         { name: "Application Implementation", href: "/appMaintenance" },
         { name: "Application Development", href: "/appDevelopment" },
         { name: "Digital Marketing", href: "/" },
+        { name: "Artificial Inteligent (AI)", href: "/" },
       ],
     },
     { name: "Blog", href: "/blog" },

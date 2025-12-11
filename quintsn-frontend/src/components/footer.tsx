@@ -37,7 +37,7 @@ export default function Footer() {
     ],
     Applications: [
       { name: "SAP Business One", href: "/businessOne" },
-      { name: "SAP by Design", href: "#services" },
+      { name: "SAP by Design", href: "/sapDesign" },
       { name: "Microsoft Dynamic 365", href: "#services" },
       { name: "SAGE ERP 300", href: "#services" },
       { name: "Oracle Netsuit", href: "#services" },

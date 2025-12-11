@@ -37,7 +37,7 @@ export default function Services() {
       description:
         "We analyse your current systems and workflows to identify opportunities for optimisation and growth",
       features: [],
-      route: "/businessConsultant",
+      route: "/services/business",
     },
     {
       icon: Cloud,
@@ -45,7 +45,7 @@ export default function Services() {
       description:
         "Our team ensures a smooth transition and provides ongoing support to maximise your ROI and achieve long-term success.",
       features: [],
-      route: "/appMaintenance",
+      route: "/services/appMain",
     },
     {
       icon: Smartphone,
@@ -53,7 +53,7 @@ export default function Services() {
       description:
         "We go beyond simply recommending ERP systems. We develop a customised plan that integrates seamlessly with your existing infrastructure and empowers your team..",
       features: [],
-      route: "/appDevelopment",
+      route: "/services/appDev",
     },
     {
       icon: Laptop,
@@ -61,7 +61,7 @@ export default function Services() {
       description:
         "Transform your data into actionable insights with advanced analytics and BI solutions.",
       features: ["Data Warehousing", "Real-time Analytics", "Custom Dashboards"],
-      route: "/data-analytics",
+      route: "/services/data-analytics",
     },
   ];
 
