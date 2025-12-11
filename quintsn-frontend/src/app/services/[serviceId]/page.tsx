@@ -17,3 +17,4 @@ export default async function ServicePage({
 
   return <ServiceTemplate data={data} />;
 }
+

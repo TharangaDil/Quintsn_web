@@ -145,20 +145,7 @@ export default function SelectedUs() {
           </div>
         ))}
 
-        {/* ✅ CONTACT SECTION 
-        <div className="container mx-auto mt-24 text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-            Contact Us
-          </h2>
-          <p className="mt-6 max-w-3xl mx-auto text-muted-foreground">
-            If you are interested in our business consultancy services or have any questions, please don’t hesitate to contact us.
-             Our team is ready to help you achieve your business objectives and unlock your full potential.
-          </p>
-
-          <div className="flex justify-center mt-10">
-            <ShineButton label="CONTACT US" />
-          </div>
-        </div>*/}
+        
 
         {/* ✅ PRODUCTS */}
         <div className="container mx-auto mt-32">
