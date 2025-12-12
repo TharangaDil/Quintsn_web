@@ -1,4 +1,4 @@
-import { servicesData, ServiceId, ServiceData } from "@/data/servicesData";
+import { ServiceData, ServiceId, servicesData } from "@/data/servicesData";
 import ServiceTemplate from "@/components/templates/serviceTemplate";
 
 export default async function ServicePage({

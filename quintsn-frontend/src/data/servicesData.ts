@@ -1,5 +1,5 @@
 export const servicesData = {
-  "appDev": {
+  "appDevelopment": {
     title: "Application Development UAE | Custom Mobile & Web Apps by QT",
     heroTitle: "Application Development UAE",
     heroDescription: "In a rapidly evolving digital landscape, application development is critical for organizations aiming to scale efficiently, remain competitive, and embrace innovation. At Quintessential Technologies, we deliver end-to-end application development services tailored to the focusing on speed, scalability, and security.",
@@ -63,7 +63,7 @@ export const servicesData = {
   },]
   },
 
-  business: {
+  businessConsultancy: {
     title: "Business Consultancy UAE | Quintessential Technologies",
     heroTitle: "Explore Our Services",
     heroDescription: "Our expert consulting team delivers strategic guidance and tailored business solutions to help companies achieve measurable growth, improve operational efficiency, and stay competitive in today’s market.",
@@ -113,7 +113,7 @@ export const servicesData = {
   },]
   },
 
-  "appMain": {
+  "appMaintenance": {
     title: "Application Implementation UAE | Support & Maintenance by QT",
     heroTitle: " Application Implementation Maintenance & Support",
     heroDescription: "We deliver scalable solutions and support services designed to meet your business needs, leveraging industry-leading tools and experienced consultants.",

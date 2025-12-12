@@ -25,11 +25,11 @@ export default function Navigation() {
 
   const navItems: NavItem[] = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/aboutDetails" },
+   
     {
       name: "Services",
       submenu: [
-        { name: "Business Consultancy", href: "/businessConsultant" },
+        { name: "Business Consultancy", href: "/businessConsultancy" },
         { name: "Application Implementation", href: "/appMaintenance" },
         { name: "Application Development", href: "/appDevelopment" },
         { name: "Digital Marketing", href: "/" },
@@ -37,6 +37,7 @@ export default function Navigation() {
       ],
     },
     { name: "Blog", href: "/blog" },
+     { name: "About", href: "/aboutDetails" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -47,7 +48,7 @@ export default function Navigation() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-sm border-b border-border"
+          ? "bg-background/95 backdrop-blur-md shadow-sm border-b border-border bg-gray-200"
           : "bg-transparent"
       }`}
     >
@@ -117,7 +118,7 @@ export default function Navigation() {
             )}
 
             <Button size="sm" className="ml-2 lg:ml-4" asChild>
-              <a href="/contact">Get Started</a>
+              <a href="/contact">Schedule A Meeting</a>
             </Button>
           </div>
 
