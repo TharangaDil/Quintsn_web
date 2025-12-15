@@ -54,7 +54,7 @@ const features = [
       }
        ], 
       }, 
-      { title: "Financial Management", 
+      { title: "Purchasing and inventory control", 
     description: "Improve margins, reduce errors, and drive more profitable decision-making with a complete set of tools for streamlined financial operations.", 
     subFeatures: [ 
       { title: "Accounting",
@@ -74,7 +74,27 @@ const features = [
       }
        ], 
       }, 
-      { title: "Financial Management", 
+      { title: "Business intelligence", 
+    description: "Improve margins, reduce errors, and drive more profitable decision-making with a complete set of tools for streamlined financial operations.", 
+    subFeatures: [ 
+      { title: "Accounting",
+         description:"Automate the handling of key accounting processes, such as journal entries, accounts receivable, and accounts payable." 
+      }, 
+      { title: "Controlling", 
+        description:"Manage cash flow, track fixed assets, control budgets, and monitor project costs with greater accuracy and efficiency." 
+      }, 
+      { title: "Fixed asset management", 
+        description:"Simplify the management of your fixed assets with a virtual function, eliminating the need for repetitive manual data entry." 
+      }, 
+      { title: "Banking and reconciliation", 
+        description:"Process reconciliations, bank statements, and payments faster through various methods including checks, cash, and bank transfers." 
+      }, 
+      { title: "Financial reporting and analysis", 
+        description:"Create standard or customized reports from real-time data to improve your business planning and audit review processes." 
+      }
+       ], 
+      },  
+      { title: "Analytics and reporting", 
     description: "Improve margins, reduce errors, and drive more profitable decision-making with a complete set of tools for streamlined financial operations.", 
     subFeatures: [ 
       { title: "Accounting",
@@ -224,6 +244,74 @@ export default function PrivacyPolicy() {
           </div>
         </div>
       </div>
+
+      <section className="bg-gradient-to-b from-white to-gray-50 py-28">
+  <div className="max-w-7xl mx-auto px-6">
+    {/* Heading */}
+    <div className="text-center max-w-3xl mx-auto mb-20">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+        See how customers are succeeding with SAP Business One
+      </h2>
+      <p className="mt-4 text-gray-600 text-lg">
+        Real businesses. Real results. Powered by SAP Business One.
+      </p>
+    </div>
+
+    {/* Cards */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      {[
+        {
+          img: "/img/coffee.png",
+          title: "Sustainable growth potential",
+          text:
+            "Majas Coffee expanded production and distribution with full traceability and direct e-commerce sales.",
+        },
+        {
+          img: "/img/western.png",
+          title: "Working smarter",
+          text:
+            "Western Spirits improved order accuracy, picking, and shipping while increasing customer satisfaction.",
+        },
+        {
+          img: "/img/kliewe.png",
+          title: "Future-proof transformation",
+          text:
+            "KlieWe modernized operations by connecting employees and offices with unified data.",
+        },
+        {
+          img: "/img/rosa.png",
+          title: "5,000+ tons controlled annually",
+          text:
+            "Vale da Rosa increased productivity by integrating all business functions end-to-end.",
+        },
+      ].map((item, index) => (
+        <motion.div
+          key={index}
+          whileHover={{ y: -6 }}
+          transition={{ duration: 0.25 }}
+          className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl border border-gray-100 text-center"
+        >
+          <Image
+            src={item.img}
+            alt={item.title}
+            width={140}
+            height={70}
+            className="mx-auto mb-6 object-contain"
+          />
+
+          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+            {item.title}
+          </h3>
+
+          <p className="text-sm text-gray-600 leading-relaxed">
+            {item.text}
+          </p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       <Footer />
     </>

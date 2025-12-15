@@ -265,10 +265,20 @@ export default function Contact() {
                     <motion.a
                       key={info.title}
                       href={info.link}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={isInView ? { opacity: 1, x: 0 } : {}}
-                      transition={{ delay: index * 0.1 }}
-                      className="flex w-full max-w-full gap-4 p-4 border rounded-xl bg-card sm:max-w-[500px]"
+                      initial={{ opacity: 0, y: 30, scale: 0.95 }}
+      animate={
+        isInView
+          ? { opacity: 1, y: 0, scale: 1 }
+          : { opacity: 0, y: 30, scale: 0.95 }
+      }
+      transition={{
+        duration: 0.6,
+        delay: 0.1 + index * 0.08,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      whileHover={{ y: -8, scale: 1.03 }}
+      
+                      className="flex w-full max-w-full gap-4 p-4 border rounded-xl bg-card sm:max-w-[500px]bg-card border-border/50 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10"
                     >
                       <info.icon className="text-primary shrink-0" />
                       <div>
@@ -323,7 +333,11 @@ export default function Contact() {
                         onChange={handleChange}
                         placeholder={key.toUpperCase()}
                         required
-                        className="w-full"
+                        className={`w-full ${
+          isMessage
+            ? "min-h-[140px] resize-none"
+            : ""
+        }`}
                       />
                     </div>
                   );
@@ -332,7 +346,7 @@ export default function Contact() {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full mt-6"
+                  className="w-full mt-16"
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
                   <Send className="ml-2" />
