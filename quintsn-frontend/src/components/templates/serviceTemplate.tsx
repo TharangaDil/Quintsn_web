@@ -160,12 +160,12 @@ export default function ServiceTemplate({ data }: { data: any }) {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className=" sm:text-4xl md:text-5xl lg:text-5xl font-bold mb-6">{section.title}</h2>
+              <h2 className=" sm:text-4xl md:text-5xl lg:text-5xl font-bold mb-6 lg:mr-28 ">{section.title}</h2>
               {Array.isArray(section.text)
                 ? section.text.map((p: string, idx: number) => (
                     <p key={idx} className="  md:text-xl lg:text-lg leading-relaxed mb-4 text-justify">{p}</p>
                   ))
-                : <p className="md:text-xl lg:text-lg leading-relaxed ">{section.text}</p>}
+                : <p className="md:text-xl lg:text-lg leading-relaxed text-justify lg:mr-40">{section.text}</p>}
             </motion.div>
 
             {/* IMAGE */}
@@ -204,9 +204,9 @@ export default function ServiceTemplate({ data }: { data: any }) {
         {data.featureItems.map((featureItems: any, i: number) => (
           <div
             key={i}
-            className={`container mx-auto my-24 grid md:grid-cols-2 gap-12 items-center lg:ml-20 ${
+            className={`container mx-auto my-24 grid md:grid-cols-2  items-center lg:ml-32  ${
               featureItems.imageSide === "left"
-                ? "md:[&>div:first-child]:order-2 lg:mr-20"
+                ? "md:[&>div:first-child]:order-2"
                 : ""
             }`}
           >
@@ -217,12 +217,12 @@ export default function ServiceTemplate({ data }: { data: any }) {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold mb-6">{featureItems.title}</h2>
+              <h2 className="sm:text-4xl md:text-5xl lg:text-5xl font-bold mb-6">{featureItems.title}</h2>
               {Array.isArray(featureItems.text)
                 ? featureItems.text.map((p: string, idx: number) => (
-                    <p key={idx} className="text-base sm:text-lg md:text-lg leading-relaxed mb-4">{p}</p>
+                    <p key={idx} className="text-base sm:text-lg md:text-lg leading-relaxed mb-4 ">{p}</p>
                   ))
-                : <p className="text-base sm:text-lg md:text-lg leading-relaxed">{featureItems.text}</p>}
+                : <p className="text-base sm:text-lg md:text-lg leading-relaxed text-justify lg:mr-48 ">{featureItems.text}</p>}
             </motion.div>
 
             {/* IMAGE */}
@@ -231,6 +231,7 @@ export default function ServiceTemplate({ data }: { data: any }) {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
+              className="lg:mr-48"
             >
               <div className="w-full relative rounded-2xl overflow-hidden shadow-xl aspect-[16/9] sm:aspect-[4/3]">
                 <Image

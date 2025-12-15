@@ -151,7 +151,7 @@ export default function BlogPage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mb-6 text-4xl font-bold leading-tight sm:text-5xl md:text-6xl lg:text-7xl text-balance"
+          className="mb-6  font-bold leading-tight sm:text-5xl md:text-6xl lg:text-7xl text-balance"
         >
           {" "}
           <span className="text-transparent bg-gradient-to-r from-primary via-primary/80 to-accent bg-clip-text text-white">
@@ -163,7 +163,7 @@ export default function BlogPage() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="max-w-3xl mx-auto mb-10 text-lg sm:text-xl text-muted-foreground text-balance text-white"
+          className="max-w-3xl mx-auto mb-10 lg:text-lg md:text-xl text-muted-foreground text-balance text-white"
         >
           Here, we share the latest insights on digital marketing, CRM solutions, AI tools, and technology strategies tailored 
           for businesses. Stay ahead with expert tips, case studies, and market trends.
