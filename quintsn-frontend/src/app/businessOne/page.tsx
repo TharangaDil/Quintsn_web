@@ -311,6 +311,31 @@ export default function PrivacyPolicy() {
     </div>
   </div>
 </section>
+{/* ===================== VIDEO SECTION ===================== */}
+<section className="py-24 bg-white">
+  <div className="max-w-5xl mx-auto px-6">
+    {/* Heading */}
+    <div className="text-center mb-14">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+        Watch SAP Business One in Action
+      </h2>
+      
+    </div>
+
+    {/* Video */}
+    <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl">
+      <iframe
+        className="absolute inset-0 w-full h-full"
+        src="https://www.youtube.com/embed/QSmlGqkKmWs"
+        title="SAP Business One Overview"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    </div>
+  </div>
+</section>
+
 
 
       <Footer />

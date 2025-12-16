@@ -319,7 +319,7 @@ export default function Contact() {
 
               <form
                 onSubmit={handleSubmit}
-                className="p-6 sm:p-8 border rounded-2xl bg-card w-full max-w-full sm:max-w-[450px]"
+                className="p-6 sm:p-8 border rounded-2xl bg-card w-full max-w-full sm:max-w-[500px]"
               >
                 {Object.entries(formData).map(([key, val]) => {
                   const isMessage = key === "message";
