@@ -186,9 +186,7 @@ export default function PrivacyPolicy() {
                           <h3 className="text-2xl font-semibold text-gray-900">
                             {feature.title}
                           </h3>
-                          <p className="mt-2 text-gray-600 max-w-xl">
-                            {feature.description}
-                          </p>
+                          
                         </div>
 
                         <motion.span
@@ -213,6 +211,9 @@ export default function PrivacyPolicy() {
                             <div className="mt-8 space-y-6">
                               {feature.subFeatures.map((sub, i) => (
                                 <div key={i}>
+                                  <p className="mt-2 text-gray-600 max-w-xl">
+                            {feature.description}
+                          </p>
                                   <h4 className="text-lg font-semibold text-gray-900">
                                     {sub.title}
                                   </h4>
