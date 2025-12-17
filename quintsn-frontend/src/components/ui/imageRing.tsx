@@ -237,15 +237,7 @@ export default function ThreeDImageRing({
   }}
 >
   {/* ⭐ Hover Label (Centered with smooth fade + scale animation) */}
-  <motion.div
-    className="absolute inset-0 flex items-center justify-center text-center
-               text-m font-semibold drop-shadow-xl"
-    initial={{ opacity: 0, scale: 0.8 }}
-    whileHover={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.35, ease: "easeOut" }}
-  >
-    {item.label}
-  </motion.div>
+
 </motion.div>
 
               ))}

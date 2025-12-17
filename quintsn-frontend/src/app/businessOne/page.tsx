@@ -154,7 +154,7 @@ export default function PrivacyPolicy() {
                 alt="SAP Business One Dashboard"
                 width={600}
                 height={400}
-                className="w-full max-w-xl h-auto object-contain"
+                className="w-full max-w-xl h-auto object-contain mt-20"
                 priority
               />
             </div>
