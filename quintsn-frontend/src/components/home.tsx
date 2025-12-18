@@ -215,16 +215,16 @@ const testimonialsInView = useInView(testimonialsRef, { once: true, margin: "-10
 
   /*IMAGE RING ITEMS */
   const items = [
-    { url: "/img/Carousel1.jpg", label: "Services", href: "/" },
-    { url: "/img/Carousel2.jpg", label: "Blog", href: "/blog" },
-    { url: "/img/Carousel3.jpg", label: "SAP Business One", href: "/" },
-    { url: "/img/Carousel4.jpg", label: "SAP by Design", href: "/businessConsultant" },
-    { url: "/img/Carousel5.jpg", label: "Microsoft Dynamic 365", href: "/" },
-    { url: "/img/Carousel6.jpg", label: "SAGE ERP 300", href: "/blog" },
-    { url: "/img/Carousel7.jpg", label: "Oracle Netsuit", href: "/" },
-     { url: "/img/Carousel8.jpg", label: "Oracle Netsuit", href: "/" },
-      { url: "/img/Carousel9.jpg", label: "Oracle Netsuit", href: "/" },
-       { url: "/img/Carousel10.jpg", label: "Oracle Netsuit", href: "/" },
+    { url: "/img/C3.jpg", label: "Business Consultancy", href: "/businessConsultancy" },
+    { url: "/img/C2.jpg", label: "App Implementation", href: "/appMaintenance" },
+    { url: "/img/C9.jpg", label: "App Development", href: "/appDevelopment" },
+    { url: "/img/C5.jpg", label: "Digital Marketing", href: "/" },
+    { url: "/img/C10.jpg", label: "AI", href: "/" },
+    { url: "/img/C6.jpg", label: "Blog", href: "/blog" },
+    { url: "/img/C7.jpg", label: "SAP Business One", href: "/businessOne" },
+    { url: "/img/C4.jpg", label: "SAP by design", href: "/" },
+    { url: "/img/C1.jpg", label: "Microsoft", href: "/" },
+    { url: "/img/C8.jpg", label: "SAGE ERP", href: "/" },
   ];
 
    const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
@@ -450,7 +450,7 @@ const [paused, setPaused] = useState(false);
       {/* IMAGE RING SECTION */}
      
 <section>
-  <div className="w-full h-[600px] overflow-hidden">
+  <div className="w-full h-[600px] overflow-hidden mt-10">
         <ThreeDImageRing images={items} />
       </div>
 </section>
